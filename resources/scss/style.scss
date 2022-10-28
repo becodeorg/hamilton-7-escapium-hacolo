@@ -1,5 +1,3 @@
-@forward "base";
-
-html {
-  background-color: red;
-}
+@forward "base/_reset.scss";
+@forward "./pages/single_room";
+@import "./utilities/variables";

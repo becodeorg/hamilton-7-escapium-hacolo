@@ -1,0 +1,14 @@
+@import "../utilities/variables";
+.EscapePresentation {
+  background-image: url("../images/room-7.jpg");
+  background-repeat: no-repeat;
+  background-size: contain;
+
+  height: 300px;
+
+  &__title {
+    margin-left: 20px;
+    padding-top: 100px;
+    color: white;
+  }
+}
