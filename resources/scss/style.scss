@@ -1,4 +1,6 @@
-@forward "base";
+@forward "base/_reset.Scss";
+@forward "pages/_contact.scss";
+
 
 html {
   background-color: red;
