@@ -3,7 +3,7 @@
 @import "../utilities/_variables.scss";
 
 
-section {
+.section__top {
   padding-top: 7rem;
   text-align: center;
   height: 23rem;
@@ -74,7 +74,7 @@ section {
 
 }
 
-section:after {
+.section__top:after {
   content: "";
   background-image: url(../images/slide-1.jpg) ;
   filter: brightness(50%);

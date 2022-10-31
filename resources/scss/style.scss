@@ -1,10 +1,17 @@
 @forward "base/_reset.scss";
 @forward "components/_buttons.scss";
 @forward "pages/_rooms.scss";
+@forward "pages/_blogs.scss";
 @import "utilities/_variables.scss";
+
+@import url('https://fonts.googleapis.com/css2?family=Hind&display=swap');
 
 html {
   font-family: 'Montserrat', sans-serif;
+}
+
+p {
+  font-family: 'Hind', sans-serif !important;
 }
 
 body {

@@ -1,0 +1,266 @@
+@forward "../components/_buttons.scss";
+@forward "../layout/_header.scss";
+@import "../utilities/_variables.scss";
+
+main {
+
+
+  .page__container {
+    margin: 10rem;
+
+    .main__divider {
+      display: flex;
+      flex-wrap: wrap;
+      max-width: 100%;
+
+      section {
+        max-width: 66.66%;
+        display: flex;
+        flex-direction: column;
+        gap: 6rem;
+
+        article {
+
+
+
+          figure {
+            position: relative;
+            margin: 0px 4rem rem -2rem;
+            z-index: -1;
+            a {
+
+              img {
+                width: 100%;
+              }
+            }
+          }
+         .article__content {
+
+           .article__content--top {
+              display: flex;
+              flex-direction: column;
+
+             span {
+               color: grey;
+               font-size: 0.8em;
+               letter-spacing: 0.3em;
+
+             }
+             .article__span--separator {
+               background-color: grey;
+               margin: 1rem;
+               width: 2rem;
+               height: 4px;
+               position: relative;
+               opacity: 0.6;
+               left: -1.5rem;
+             }
+           }
+           h2 {
+             font-size: 2rem;
+             color: $whiteBackground;
+             font-weight: 700;
+             margin-bottom: 0;
+           }
+           ul {
+             margin-top: 1.5rem;
+             display: flex;
+             margin-bottom: 3rem;
+
+             li {
+
+               color: lightgrey;
+               font-size: .7rem;
+               text-transform: uppercase;
+               font-weight: 700;
+               margin-right: 2rem;
+               gap: 1rem;
+               opacity: 0.7;
+
+               i {
+                 margin-right: 1rem;
+                 color: $whiteBackground;
+               }
+             }
+           }
+           p {
+             font-size: 0.9rem;
+             font-weight: 300;
+             line-height: 1.5;
+             color: lightgrey;
+             opacity: 0.7;
+           }
+           a {
+             text-align: center;
+             margin-top: 2rem;
+             @extend #nav__button;
+             font-size: 0.8rem;
+             width: 5rem;
+             border-color: rgba(255,255,255,.50);
+
+           }
+         }
+        }
+        .article__content {
+          padding: 4rem 3rem;
+          background-color: #202020;
+          box-shadow: 0 10px 30px rgb(0 0 0/ 50%);
+          margin-top: -3rem;
+          z-index: 99;
+        }
+      }
+
+      aside {
+        max-width: 33.33%;
+        padding-left: 2rem;
+
+        .aside {
+          padding-left: 20px;
+          margin-bottom: 4rem;
+
+          h3 {
+            position: relative;
+            padding-bottom: 1.5rem;
+            margin-bottom: 2rem;
+            font-size: 1.5rem;
+            color: $whiteBackground;
+            font-weight: 700;
+
+          }
+          h3:before {
+            content: "";
+            display: block;
+            position: absolute;
+            width: 1.8rem;
+            height: 3px;
+            left: -1.3rem;
+            bottom: 0;
+            background-color: rgba(255,255,255, .1);
+          }
+        }
+
+      }
+      .aside__categories {
+
+        ul {
+
+          li {
+            padding: 0 0 1rem 20px;
+            position: relative;
+            text-transform: uppercase;
+
+
+            a {
+              margin-bottom: 1.2rem;
+              text-transform: uppercase;
+              color: lightgrey;
+              opacity: 0.6;
+              font-size: 0.65em;
+              letter-spacing: 0.2em;
+            }
+
+            a::before {
+              content: "";
+              position: absolute;
+              top: 0.25rem;
+              left: 0;
+              width: 6px;
+              height: 6px;
+              border-radius: 50%;
+              background-color: $red;
+              opacity: 0;
+            }
+
+            a:hover::before {
+              opacity: 1;
+              cursor: pointer;
+              color: $whiteBackground;
+            }
+            a:hover {
+              cursor: pointer;
+            }
+          }
+        }
+      }
+      .aside__popular {
+
+        .ul__popular {
+
+          li {
+            position: relative;
+
+
+            div {
+              min-height: 5rem;
+              padding: 1.2rem;
+              position: relative;
+              z-index: 1;
+              display: flex;
+              align-items: center;
+
+              span {
+                color: grey;
+                text-transform: uppercase;
+                font-size: .7rem;
+                padding-right: 3rem;
+                margin-right: 1rem;
+                position: relative;
+              }
+              span:after {
+                content: "";
+                position: absolute;
+                right: 0;
+                top: 50%;
+                width: 1.7rem;
+                height: 1px;
+                background-color: rgba(255,255,255, .1);
+              }
+              h4 {
+                font-size: 1rem;
+                text-transform: uppercase;
+                color: $whiteBackground;
+                font-weight: 700;
+              }
+            }
+          }
+          li::after, li::before {
+            content: "";
+            display: block;
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            opacity: 0;
+            transition: opacity .3s linear;
+          }
+          li::after {
+            background-color: rgba(0, 0, 0, .5);
+          }
+
+          .popular__one::before {
+            background-image: url('../images/room-3.jpg');
+            background-size: cover;
+            background-position: 50% 50%;
+          }
+          .popular__two::before {
+            background-image: url('../images/room-2.jpg');
+            background-size: cover;
+            background-position: 50% 50%;
+          }
+          .popular__three::before {
+            background-image: url('../images/room-5.jpg');
+            background-size: cover;
+            background-position: 50% 50%;
+          }
+
+          li:hover::before, li:hover::after {
+            opacity: 1;
+          }
+        }
+      }
+    }
+  }
+
+
+}

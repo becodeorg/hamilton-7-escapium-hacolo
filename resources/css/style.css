@@ -1,4 +1,5 @@
 @charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Hind&display=swap");
 /* http://meyerweb.com/eric/tools/css/reset/
    v2.0 | 20110126
    License: none (public domain)
@@ -53,7 +54,7 @@ table {
   border-spacing: 0;
 }
 
-#nav__button, main .main__level--container .main__ul li {
+#nav__button, main .page__container .main__divider section article .article__content a, main .main__level--container .main__ul li {
   border: 1px solid lightgray;
   padding: 1rem 2rem 1rem 2rem;
   border-radius: 3rem;
@@ -116,7 +117,7 @@ header nav .nav__div--right {
   right: 2rem;
   display: flex;
 }
-header nav .nav__div--right #nav__button, header nav .nav__div--right main .main__level--container .main__ul li, main .main__level--container .main__ul header nav .nav__div--right li {
+header nav .nav__div--right #nav__button, header nav .nav__div--right main .page__container .main__divider section article .article__content a, main .page__container .main__divider section article .article__content header nav .nav__div--right a, header nav .nav__div--right main .main__level--container .main__ul li, main .main__level--container .main__ul header nav .nav__div--right li {
   margin-right: 1rem;
 }
 header nav .nav__div--right .nav__ul--right {
@@ -132,7 +133,7 @@ header nav .nav__div--right .nav__ul--right .nav__right--login {
   text-transform: uppercase;
 }
 
-section {
+.section__top {
   padding-top: 7rem;
   text-align: center;
   height: 23rem;
@@ -140,18 +141,18 @@ section {
   position: relative;
   z-index: 1;
 }
-section .section__container {
+.section__top .section__container {
   width: 100%;
   padding: 8rem 0rem;
 }
-section .section__container h1 {
+.section__top .section__container h1 {
   font-size: 4.4em;
   text-transform: lowercase;
   font-weight: 700;
   color: #fefefe;
   letter-spacing: -2px;
 }
-section .section__container h1:after {
+.section__top .section__container h1:after {
   content: "";
   height: 0.2em;
   width: 0.2em;
@@ -161,37 +162,37 @@ section .section__container h1:after {
   position: relative;
   margin-left: 0.07rem;
 }
-section .section__container .breadcrumbs {
+.section__top .section__container .breadcrumbs {
   padding: 1.5rem 0rem;
   display: flex;
   justify-content: center;
   background-color: transparent;
 }
-section .section__container .breadcrumbs li {
+.section__top .section__container .breadcrumbs li {
   padding-left: 0.5rem;
   font-size: 0.78em;
   text-transform: uppercase;
 }
-section .section__container .breadcrumbs li a {
+.section__top .section__container .breadcrumbs li a {
   text-decoration: none;
   color: #fefefe;
 }
-section .section__container .breadcrumbs li:after {
+.section__top .section__container .breadcrumbs li:after {
   padding-right: 0.2rem;
   color: lightgrey;
   content: "—";
   padding-left: 0.2rem;
   opacity: 0.14;
 }
-section .section__container .breadcrumbs li:last-child:after {
+.section__top .section__container .breadcrumbs li:last-child:after {
   color: transparent;
 }
-section .section__container .breadcrumbs li:last-child {
+.section__top .section__container .breadcrumbs li:last-child {
   color: lightgrey;
   opacity: 0.3;
 }
 
-section:after {
+.section__top:after {
   content: "";
   background-image: url(../images/slide-1.jpg);
   filter: brightness(50%);
@@ -566,8 +567,222 @@ main .main__navigation--page ul li:hover {
     gap: 1.2rem;
   }
 }
+main .page__container {
+  margin: 10rem;
+}
+main .page__container .main__divider {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 100%;
+}
+main .page__container .main__divider section {
+  max-width: 66.66%;
+  display: flex;
+  flex-direction: column;
+  gap: 6rem;
+}
+main .page__container .main__divider section article figure {
+  position: relative;
+  margin: 0px 4rem rem -2rem;
+  z-index: -1;
+}
+main .page__container .main__divider section article figure a img {
+  width: 100%;
+}
+main .page__container .main__divider section article .article__content .article__content--top {
+  display: flex;
+  flex-direction: column;
+}
+main .page__container .main__divider section article .article__content .article__content--top span {
+  color: grey;
+  font-size: 0.8em;
+  letter-spacing: 0.3em;
+}
+main .page__container .main__divider section article .article__content .article__content--top .article__span--separator {
+  background-color: grey;
+  margin: 1rem;
+  width: 2rem;
+  height: 4px;
+  position: relative;
+  opacity: 0.6;
+  left: -1.5rem;
+}
+main .page__container .main__divider section article .article__content h2 {
+  font-size: 2rem;
+  color: #fefefe;
+  font-weight: 700;
+  margin-bottom: 0;
+}
+main .page__container .main__divider section article .article__content ul {
+  margin-top: 1.5rem;
+  display: flex;
+  margin-bottom: 3rem;
+}
+main .page__container .main__divider section article .article__content ul li {
+  color: lightgrey;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  margin-right: 2rem;
+  gap: 1rem;
+  opacity: 0.7;
+}
+main .page__container .main__divider section article .article__content ul li i {
+  margin-right: 1rem;
+  color: #fefefe;
+}
+main .page__container .main__divider section article .article__content p {
+  font-size: 0.9rem;
+  font-weight: 300;
+  line-height: 1.5;
+  color: lightgrey;
+  opacity: 0.7;
+}
+main .page__container .main__divider section article .article__content a {
+  text-align: center;
+  margin-top: 2rem;
+  font-size: 0.8rem;
+  width: 5rem;
+  border-color: rgba(255, 255, 255, 0.5);
+}
+main .page__container .main__divider section .article__content {
+  padding: 4rem 3rem;
+  background-color: #202020;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  margin-top: -3rem;
+  z-index: 99;
+}
+main .page__container .main__divider aside {
+  max-width: 33.33%;
+  padding-left: 2rem;
+}
+main .page__container .main__divider aside .aside {
+  padding-left: 20px;
+  margin-bottom: 4rem;
+}
+main .page__container .main__divider aside .aside h3 {
+  position: relative;
+  padding-bottom: 1.5rem;
+  margin-bottom: 2rem;
+  font-size: 1.5rem;
+  color: #fefefe;
+  font-weight: 700;
+}
+main .page__container .main__divider aside .aside h3:before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 1.8rem;
+  height: 3px;
+  left: -1.3rem;
+  bottom: 0;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+main .page__container .main__divider .aside__categories ul li {
+  padding: 0 0 1rem 20px;
+  position: relative;
+  text-transform: uppercase;
+}
+main .page__container .main__divider .aside__categories ul li a {
+  margin-bottom: 1.2rem;
+  text-transform: uppercase;
+  color: lightgrey;
+  opacity: 0.6;
+  font-size: 0.65em;
+  letter-spacing: 0.2em;
+}
+main .page__container .main__divider .aside__categories ul li a::before {
+  content: "";
+  position: absolute;
+  top: 0.25rem;
+  left: 0;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #F60B0E;
+  opacity: 0;
+}
+main .page__container .main__divider .aside__categories ul li a:hover::before {
+  opacity: 1;
+  cursor: pointer;
+  color: #fefefe;
+}
+main .page__container .main__divider .aside__categories ul li a:hover {
+  cursor: pointer;
+}
+main .page__container .main__divider .aside__popular .ul__popular li {
+  position: relative;
+}
+main .page__container .main__divider .aside__popular .ul__popular li div {
+  min-height: 5rem;
+  padding: 1.2rem;
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+}
+main .page__container .main__divider .aside__popular .ul__popular li div span {
+  color: grey;
+  text-transform: uppercase;
+  font-size: 0.7rem;
+  padding-right: 3rem;
+  margin-right: 1rem;
+  position: relative;
+}
+main .page__container .main__divider .aside__popular .ul__popular li div span:after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 50%;
+  width: 1.7rem;
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+main .page__container .main__divider .aside__popular .ul__popular li div h4 {
+  font-size: 1rem;
+  text-transform: uppercase;
+  color: #fefefe;
+  font-weight: 700;
+}
+main .page__container .main__divider .aside__popular .ul__popular li::after, main .page__container .main__divider .aside__popular .ul__popular li::before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  opacity: 0;
+  transition: opacity 0.3s linear;
+}
+main .page__container .main__divider .aside__popular .ul__popular li::after {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+main .page__container .main__divider .aside__popular .ul__popular .popular__one::before {
+  background-image: url("../images/room-3.jpg");
+  background-size: cover;
+  background-position: 50% 50%;
+}
+main .page__container .main__divider .aside__popular .ul__popular .popular__two::before {
+  background-image: url("../images/room-2.jpg");
+  background-size: cover;
+  background-position: 50% 50%;
+}
+main .page__container .main__divider .aside__popular .ul__popular .popular__three::before {
+  background-image: url("../images/room-5.jpg");
+  background-size: cover;
+  background-position: 50% 50%;
+}
+main .page__container .main__divider .aside__popular .ul__popular li:hover::before, main .page__container .main__divider .aside__popular .ul__popular li:hover::after {
+  opacity: 1;
+}
+
 html {
   font-family: "Montserrat", sans-serif;
+}
+
+p {
+  font-family: "Hind", sans-serif !important;
 }
 
 body {
