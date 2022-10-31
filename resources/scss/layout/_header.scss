@@ -1,12 +1,12 @@
 @import "../utilities/_variables.scss";
 
-
 header {
   position: fixed;
   display: flex;
   background-color: rgba(20,20,20,.50);
   width: 100%;
   height: 5rem;
+  z-index: 99;
 
   #nav__logo {
     height: 100%;
@@ -29,16 +29,58 @@ header {
         a {
           color: $navFontColor;
           text-decoration: none;
+          display: block;
+          position: relative;
         }
+        a:before {
+          content: '';
+          position: absolute;
+          margin-left: 50%;
+          height: 50px;
+          bottom: -100%;
+          transform: translateX(-50%) rotate(-135deg) scaleY(0);
+          transition: transform .5s cubic-bezier(.2,1,.2,1);
+          z-index: -1;
+        }
+
+        a:hover:before {
+          background: $red;
+          width: 3px;
+          transform: translateX(-50%) rotate(-135deg) scaleY(1);
+        }
+        a:hover {
+          color: $whiteBackground;
+        }
+
       }
     }
     .nav__div--right {
       position: fixed;
       right: 2rem;
       display: flex;
+
+      #nav__button {
+        margin-right: 1rem;
+      }
+      .nav__ul--right {
+        color: $whiteBackground;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+
+        .nav__right--search{
+
+        }
+
+        .nav__right--login {
+          padding-left: 1rem;
+          border-left: 1px solid rgba(255,255,255,.50);
+          height: 1em;
+          text-transform: uppercase;
+        }
+      }
     }
   }
-
 
 }
 

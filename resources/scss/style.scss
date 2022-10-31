@@ -1,2 +1,12 @@
 @forward "base/_reset.scss";
+@forward "components/_buttons.scss";
 @forward "pages/_rooms.scss";
+@import "utilities/_variables.scss";
+
+html {
+  font-family: 'Montserrat', sans-serif;
+}
+
+body {
+  background-color: $darkestBackground;
+}
