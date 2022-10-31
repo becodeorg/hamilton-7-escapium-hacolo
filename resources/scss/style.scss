@@ -75,11 +75,23 @@ li{
   flex-direction: column;
 }
 #form-button{
-  color: aliceblue;
+  color: white;
   background-color: #F60B0E;
-  border-radius: 50%;
-  marging:100%;
-
+  border: none;
+  border-radius: 28px;
+  padding: 16px 182px;
+  text-align: center;
+  font-size: 16px;
+  margin: 4px 2px;
+  opacity: 0.6;
+  transition: 0.3s;
+  display: inline-block;
+  text-decoration: none;
+  cursor: pointer;
+}
+#form-button:hover {
+  opacity: 1;
+  background-color: #F60B0E;
 }
 
 .form{
