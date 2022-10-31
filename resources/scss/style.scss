@@ -1,7 +1,133 @@
-@forward "base/_reset.Scss";
+@forward "base/_reset.scss";
 @forward "pages/_contact.scss";
 
 
-html {
-  background-color: red;
+.header:after {
+      content: "";
+      background-image: url(../images/slide-1.jpg);
+      filter: brightness(50%);
+      top: -30px;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      position: absolute;
+      z-index: -1;
+      background-repeat: no-repeat;
+      background-size: cover;
+  }
+  
+  header {
+    padding-top: 7rem;
+    text-align: center;
+    height: 23rem;
+    background-position: 50% 50%;
+    position: relative;
+    z-index: 1;
+  }
+
+.header-contact {
+  color:white;
+  width: 12rem;
+  height: 6rem;
+  text-align: center;
+  font-weight: 700;
+  font-size: 3rem;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-evenly;
+  align-items: center;
+  align-content: stretch;
 }
+.header-li {
+  word-spacing: 1rem;
+}
+
+#header-point {
+  color: #F60B0E ;/*$red*/
+  font-weight: 900;
+    font-size: 5rem;
+    text-align: center;
+}
+
+ul{
+display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-evenly;
+  align-items: center;
+  align-content: space-between;
+}
+
+li{
+  color: aliceblue;
+}
+/**********************************FORM**************/
+
+.section-class{
+  display: flex;
+}
+.form-get{
+  flex-direction: column;
+}
+.form-contact{
+  flex-direction: column;
+}
+#form-button{
+  color: aliceblue;
+  background-color: #F60B0E;
+  border-radius: 50%;
+  marging:100%;
+
+}
+
+.form{
+  background-color: #1b1b1b;
+  width: 1920px;;
+  height: 15rem;
+}
+
+.title-h2{
+  color: white;
+  font-weight: 300;
+  font-size: 1.5rem;
+}
+
+.title-h3 {
+  color: white;
+  font-weight: 300;
+  font-size: 30px;
+}
+
+p{
+  color: #717171;
+  font-size: 0.5rem;
+}
+
+.form-ul{
+  color: #717171;
+  font-size: 0.6rem;
+}
+
+
+/*************************IMAGE SATELLITE ***************/
+.key{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/***************************ADRESSE*********************/
+a.mailto:hover,a.mailto:active{
+      color: red;
+}
+
+
+
+/*************************IMAGE EXIT ***************/
+.img-exit{
+  background-image: url(../images/room-7.jpg);
+  background-repeat: no-repeat;
+}
+
