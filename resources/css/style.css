@@ -231,4 +231,84 @@ h1 {
   margin-right: 15px;
 }
 
+hr {
+  width: 10%;
+  height: 3px;
+  margin: auto;
+  background-color: #717171;
+  border-radius: 4%;
+}
+
+.Booking {
+  background-color: #222222;
+  height: 560px;
+  padding-top: 40px;
+}
+.Booking__title {
+  margin-top: 40px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  color: white;
+  font-family: Montserrat;
+  font-size: 21px;
+}
+.Booking__calendar {
+  width: 382px;
+  height: 382px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 40px;
+  box-shadow: 2px 9px 20px 5px rgba(0, 0, 0, 0.75);
+  border: solid #717171 1px;
+}
+
+.otherRoom {
+  background-color: #1b1b1b;
+  height: 500px;
+}
+.otherRoom__title {
+  margin-left: 10px;
+  padding-top: 35px;
+  color: white;
+  margin-bottom: 30px;
+}
+.otherRoom__padding {
+  padding-top: 220px;
+  height: 108px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin-left: 25px;
+}
+.otherRoom__padding--grid {
+  display: grid;
+  grid-template-columns: repeat(5, 20px);
+  grid-template-rows: 1fr;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+}
+.otherRoom__room {
+  width: 382px;
+  height: 350px;
+  margin-left: auto;
+  margin-right: auto;
+  background: linear-gradient(0deg, rgb(0, 0, 0) 5%, rgba(27, 27, 27, 0) 100%), url("../images/room-8.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  box-shadow: 2px 4px 20px 5px rgba(0, 0, 0, 0.75);
+}
+.otherRoom__room--flex {
+  color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 190px;
+  font-size: smaller;
+}
+
+.grayColor {
+  color: #717171;
+}
+
 /*# sourceMappingURL=style.css.map */
