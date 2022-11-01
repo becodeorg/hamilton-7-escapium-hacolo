@@ -452,17 +452,17 @@ main .main__navigation--page ul li:hover {
 }
 
 @media (max-width: 413px) {
-  section {
+  .section__top {
     padding-top: 7rem;
     text-align: center;
     height: 15rem;
     background-position: 70% 50%;
   }
-  section .section__container {
+  .section__top .section__container {
     width: 100%;
     padding: 4rem 0rem;
   }
-  section .section__container h1 {
+  .section__top .section__container h1 {
     font-size: 3em;
   }
   main {
@@ -516,29 +516,9 @@ main .main__navigation--page ul li:hover {
   }
 }
 @media (min-width: 768px) and (max-width: 1280px) {
-  section {
-    padding-top: 7rem;
-    text-align: center;
-    height: 15rem;
-    background-position: 50% 50%;
-  }
-  section .section__container {
-    width: 100%;
-    padding: 4rem 0rem;
-  }
-  section .section__container h1 {
-    font-size: 3em;
-  }
-  main {
-    padding: 5rem 0rem;
-    z-index: 3;
-  }
-  main .main__level--container .main__ul {
-    margin-bottom: 5rem;
-  }
-  main .main__grid--container {
+  .main__grid--container {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(1, 1fr);
     grid-template-rows: repeat(3, 1fr);
     grid-column-gap: 0;
     margin: 0rem auto;
@@ -546,7 +526,7 @@ main .main__navigation--page ul li:hover {
     max-width: 100%;
     margin-bottom: 3rem;
   }
-  main .main__grid--container article {
+  .main__grid--container article {
     width: 9.6rem;
     height: 13rem;
     position: relative;
@@ -555,7 +535,7 @@ main .main__navigation--page ul li:hover {
     overflow: hidden;
     box-shadow: 1px 1px 11px 14px rgba(0, 0, 0, 0.21);
   }
-  main .main__grid--container article .article__content {
+  .main__grid--container article .article__content {
     display: flex;
     flex-direction: column;
     align-items: baseline;
@@ -583,11 +563,12 @@ main .page__container .main__divider section {
 }
 main .page__container .main__divider section article figure {
   position: relative;
-  margin: 0px 4rem rem -2rem;
+  margin: 0px 4rem 0rem -4rem;
   z-index: -1;
 }
 main .page__container .main__divider section article figure a img {
   width: 100%;
+  height: 40rem;
 }
 main .page__container .main__divider section article .article__content .article__content--top {
   display: flex;
@@ -648,7 +629,7 @@ main .page__container .main__divider section article .article__content a {
 main .page__container .main__divider section .article__content {
   padding: 4rem 3rem;
   background-color: #202020;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.5);
   margin-top: -3rem;
   z-index: 99;
 }
@@ -678,20 +659,20 @@ main .page__container .main__divider aside .aside h3:before {
   bottom: 0;
   background-color: rgba(255, 255, 255, 0.1);
 }
-main .page__container .main__divider .aside__categories ul li {
+main .page__container .main__divider .aside__categories ul li, main .page__container .main__divider .aside__archive ul li {
   padding: 0 0 1rem 20px;
   position: relative;
   text-transform: uppercase;
 }
-main .page__container .main__divider .aside__categories ul li a {
+main .page__container .main__divider .aside__categories ul li a, main .page__container .main__divider .aside__archive ul li a {
   margin-bottom: 1.2rem;
   text-transform: uppercase;
   color: lightgrey;
   opacity: 0.6;
-  font-size: 0.65em;
+  font-size: 0.75em;
   letter-spacing: 0.2em;
 }
-main .page__container .main__divider .aside__categories ul li a::before {
+main .page__container .main__divider .aside__categories ul li a::before, main .page__container .main__divider .aside__archive ul li a::before {
   content: "";
   position: absolute;
   top: 0.25rem;
@@ -702,13 +683,13 @@ main .page__container .main__divider .aside__categories ul li a::before {
   background-color: #F60B0E;
   opacity: 0;
 }
-main .page__container .main__divider .aside__categories ul li a:hover::before {
+main .page__container .main__divider .aside__categories ul li a:hover::before, main .page__container .main__divider .aside__archive ul li a:hover::before {
   opacity: 1;
   cursor: pointer;
-  color: #fefefe;
 }
-main .page__container .main__divider .aside__categories ul li a:hover {
+main .page__container .main__divider .aside__categories ul li a:hover, main .page__container .main__divider .aside__archive ul li a:hover {
   cursor: pointer;
+  color: white;
 }
 main .page__container .main__divider .aside__popular .ul__popular li {
   position: relative;
@@ -776,7 +757,158 @@ main .page__container .main__divider .aside__popular .ul__popular .popular__thre
 main .page__container .main__divider .aside__popular .ul__popular li:hover::before, main .page__container .main__divider .aside__popular .ul__popular li:hover::after {
   opacity: 1;
 }
+main .page__container .main__divider .aside__tags {
+  max-width: 30rem;
+}
+main .page__container .main__divider .aside__tags div {
+  margin-top: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+main .page__container .main__divider .aside__tags div a {
+  margin: 0 0.5rem 0.75rem 0;
+  border: 2px solid lightgray;
+  padding: 1rem 2rem 1rem 2rem;
+  border-radius: 3rem;
+  text-decoration: none;
+  color: #fefefe;
+  font-weight: 700;
+}
+main .page__container .main__divider .aside__photos .photos__container ul {
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  grid-template-rows: repeat(2, auto);
+  grid-column-gap: 0px;
+  grid-row-gap: 1rem;
+}
+main .page__container .main__divider .aside__photos .photos__container ul li {
+  width: 9rem;
+}
+main .page__container .main__divider .aside__photos .photos__container ul li img {
+  width: 9rem;
+}
+main .page__container .main__divider .aside__photos .photos__container ul li:hover {
+  color: #F60B0E;
+}
 
+@media only screen and (max-width: 413px) {
+  main .page__container {
+    margin: 0;
+  }
+  main .page__container .main__divider {
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+  }
+  main .page__container .main__divider .main__section {
+    max-width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6rem;
+  }
+  main .page__container .main__divider .main__section .article {
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+  }
+  main .page__container .main__divider .main__section .article .figure {
+    margin: 0;
+  }
+  main .page__container .main__divider .main__section .article .figure a img {
+    height: 25rem;
+  }
+  main .page__container .main__divider .main__section .article .article__content .article__content--top ul {
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  main .page__container .main__divider aside {
+    max-width: 100%;
+    padding-top: 5rem;
+    padding-right: 1rem;
+    padding-left: 1rem;
+  }
+  main .page__container .main__divider .aside__popular {
+    justify-content: center;
+    margin-top: 6rem;
+    width: 20rem;
+    padding-left: 0rem;
+  }
+  main .page__container .main__divider .aside__tags div {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 412px;
+  }
+  main .page__container .main__divider .aside__tags div a {
+    font-size: 0.7rem;
+    margin: 0;
+    padding: 0.5rem 1rem 0.5rem 1rem;
+  }
+  main .page__container .main__divider .aside__photos .photos__container {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+  }
+  main .page__container .main__divider .aside__photos .photos__container ul {
+    grid-template-columns: repeat(6, auto);
+    grid-template-rows: repeat(1, auto);
+    gap: 0px;
+    place-items: center;
+    gap: 0.5rem;
+    margin-left: -2.5rem;
+  }
+  main .page__container .main__divider .aside__photos .photos__container ul li {
+    width: 3rem;
+    float: left;
+    margin: 0;
+  }
+  main .page__container .main__divider .aside__photos .photos__container ul li img {
+    width: 3rem;
+    margin: 0;
+  }
+  main .page__container .main__divider .aside__photos .photos__container ul .draw-border {
+    color: #F60B0E;
+    transition: color 0.25s 0.0833333333s;
+    position: relative;
+  }
+  main .page__container .main__divider .aside__photos .photos__container ul .draw-border::before, main .page__container .main__divider .aside__photos .photos__container ul .draw-border::after {
+    border: 0 solid transparent;
+    box-sizing: border-box;
+    content: "";
+    pointer-events: none;
+    position: absolute;
+    width: 0;
+    height: 0;
+    z-index: 1;
+    top: 0;
+    right: 0;
+  }
+  main .page__container .main__divider .aside__photos .photos__container ul .draw-border::before {
+    border-top-width: 2px;
+    border-left-width: 2px;
+  }
+  main .page__container .main__divider .aside__photos .photos__container ul .draw-border::after {
+    border-bottom-width: 2px;
+    border-right-width: 2px;
+  }
+  main .page__container .main__divider .aside__photos .photos__container ul .draw-border:hover {
+    color: #F60B0E;
+  }
+  main .page__container .main__divider .aside__photos .photos__container ul .draw-border:hover::before, main .page__container .main__divider .aside__photos .photos__container ul .draw-border:hover::after {
+    border-color: #F60B0E;
+    transition: border-color 0s, width 0.25s, height 0.25s;
+    width: 100%;
+    height: 100%;
+  }
+  main .page__container .main__divider .aside__photos .photos__container ul .draw-border:hover::before {
+    transition-delay: 0s, 0s, 0.25s;
+  }
+  main .page__container .main__divider .aside__photos .photos__container ul .draw-border:hover::after {
+    transition-delay: 0s, 0.25s, 0s;
+  }
+}
 html {
   font-family: "Montserrat", sans-serif;
 }

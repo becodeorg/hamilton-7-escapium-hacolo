@@ -365,7 +365,7 @@ main {
 
 @media (max-width: 413px) {
 
-  section {
+  .section__top {
     padding-top: 7rem;
     text-align: center;
     height: 15rem;
@@ -442,37 +442,11 @@ main {
   }
 }
 @media (min-width: 768px) and (max-width: 1280px) {
-  section {
-    padding-top: 7rem;
-    text-align: center;
-    height: 15rem;
-    background-position: 50% 50%;
 
-
-    .section__container {
-      width: 100%;
-      padding: 4rem 0rem;
-
-      h1 {
-        font-size: 3em;
-      }
-    }
-  }
-  main {
-    padding: 5rem 0rem;
-    z-index: 3;
-
-    .main__level--container {
-
-      .main__ul {
-        margin-bottom: 5rem;
-
-      }
-    }
 
     .main__grid--container {
       display: grid;
-      grid-template-columns: repeat(4, 1fr);
+      grid-template-columns: repeat(1, 1fr);
       grid-template-rows: repeat(3, 1fr);
       grid-column-gap: 0;
       margin: 0rem auto;
@@ -506,4 +480,4 @@ main {
     }
   }
 
-}
+

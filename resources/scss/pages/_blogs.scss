@@ -1,6 +1,7 @@
 @forward "../components/_buttons.scss";
 @forward "../layout/_header.scss";
-@import "../utilities/_variables.scss";
+@use "../utilities/variables" as variables;
+
 
 main {
 
@@ -25,12 +26,14 @@ main {
 
           figure {
             position: relative;
-            margin: 0px 4rem rem -2rem;
+            margin: 0px 4rem 0rem -4rem;
             z-index: -1;
+
             a {
 
               img {
                 width: 100%;
+                height: 40rem;
               }
             }
           }
@@ -58,7 +61,7 @@ main {
            }
            h2 {
              font-size: 2rem;
-             color: $whiteBackground;
+             color: variables.$whiteBackground;
              font-weight: 700;
              margin-bottom: 0;
            }
@@ -79,7 +82,7 @@ main {
 
                i {
                  margin-right: 1rem;
-                 color: $whiteBackground;
+                 color: variables.$whiteBackground;
                }
              }
            }
@@ -104,7 +107,7 @@ main {
         .article__content {
           padding: 4rem 3rem;
           background-color: #202020;
-          box-shadow: 0 10px 30px rgb(0 0 0/ 50%);
+          box-shadow: 0 1rem 2rem rgb(0 0 0/ 50%);
           margin-top: -3rem;
           z-index: 99;
         }
@@ -123,7 +126,7 @@ main {
             padding-bottom: 1.5rem;
             margin-bottom: 2rem;
             font-size: 1.5rem;
-            color: $whiteBackground;
+            color: variables.$whiteBackground;
             font-weight: 700;
 
           }
@@ -140,7 +143,7 @@ main {
         }
 
       }
-      .aside__categories {
+      .aside__categories, .aside__archive {
 
         ul {
 
@@ -155,7 +158,7 @@ main {
               text-transform: uppercase;
               color: lightgrey;
               opacity: 0.6;
-              font-size: 0.65em;
+              font-size: 0.75em;
               letter-spacing: 0.2em;
             }
 
@@ -167,17 +170,18 @@ main {
               width: 6px;
               height: 6px;
               border-radius: 50%;
-              background-color: $red;
+              background-color: variables.$red;
               opacity: 0;
             }
 
             a:hover::before {
               opacity: 1;
               cursor: pointer;
-              color: $whiteBackground;
             }
             a:hover {
               cursor: pointer;
+              color: white;
+
             }
           }
         }
@@ -218,7 +222,7 @@ main {
               h4 {
                 font-size: 1rem;
                 text-transform: uppercase;
-                color: $whiteBackground;
+                color: variables.$whiteBackground;
                 font-weight: 700;
               }
             }
@@ -259,8 +263,230 @@ main {
           }
         }
       }
+      .aside__tags {
+        max-width: 30rem;
+
+        div {
+          margin-top: 2rem;
+          display: flex;
+          flex-wrap: wrap;
+          gap: 0.5rem;
+          a {
+            margin: 0 .5rem .75rem 0;
+            border: 2px solid lightgray;
+            padding: 1rem 2rem 1rem 2rem;
+            border-radius: 3rem;
+            text-decoration: none;
+            color: variables.$whiteBackground;
+            font-weight: 700;
+          }
+
+        }
+
+      }
+      .aside__photos {
+
+        .photos__container {
+
+
+
+        ul {
+          padding: 0;
+          display: grid;
+          grid-template-columns: repeat(3, auto);
+          grid-template-rows: repeat(2, auto);
+          grid-column-gap: 0px;
+          grid-row-gap: 1rem;
+
+          li {
+            width: 9rem;
+
+            img {
+              width: 9rem;
+            }
+          }
+          li:hover {
+            color: variables.$red;
+          }
+
+
+          }
+        }
+      }
     }
   }
+}
+
+@media only screen and (max-width: 413px) {
+
+main {
+
+  .page__container {
+    margin: 0;
+
+    .main__divider {
+      display: flex;
+      flex-direction: column;
+      max-width: 100%;
+
+      .main__section {
+        max-width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 6rem;
+
+        .article {
+          display: flex;
+          flex-direction: column;
+          align-items: baseline;
+
+          .figure {
+            margin: 0;
+
+            a {
+              img {
+                height: 25rem;
+              }
+            }
+          }
+          .article__content {
+
+            .article__content--top {
+
+              ul {
+                flex-wrap: wrap;
+                gap: 1rem;
+              }
+            }
+          }
+        }
+
+
+      }
+
+      aside {
+        max-width: 100%;
+        padding-top: 5rem;
+        padding-right: 1rem;
+        padding-left: 1rem;
+      }
+
+      .aside__popular {
+        justify-content: center;
+        margin-top: 6rem;
+        width: 20rem;
+        padding-left: 0rem;
+
+      }
+      .aside__tags {
+
+        div {
+          display: flex;
+          flex-direction: row;
+          flex-wrap: wrap;
+          width: 412px;
+          a {
+            font-size: 0.7rem;
+            margin: 0;
+            padding: 0.5rem 1rem 0.5rem 1rem;
+
+        }
+      }
+      }
+      .aside__photos {
+
+       .photos__container{
+         display: flex;
+         width: 100%;
+         justify-content: center;
+
+
+         ul {
+           grid-template-columns: repeat(6, auto);
+           grid-template-rows: repeat(1, auto);
+           gap: 0px;
+           place-items: center;
+           gap: 0.5rem;
+           margin-left: -2.5rem;
+
+
+           li {
+             width: 3rem;
+             float: left;
+             margin: 0;
+
+             img {
+               width: 3rem;
+               margin: 0;
+             }
+           }
+           @mixin btn-border-drawing($color: #ccc, $hover: black, $width: 2px, $vertical: top, $horizontal: left, $duration: 0.25s) {
+             color: $color;
+             transition: color $duration calc($duration/3);
+             position: relative;
+
+             &::before,
+             &::after {
+               border: 0 solid transparent;
+               box-sizing: border-box;
+               content: '';
+               pointer-events: none;
+               position: absolute;
+               width: 0;
+               height: 0;
+               z-index: 1;
+
+               #{$vertical}: 0;
+               #{$horizontal}: 0;
+             }
+
+             &::before {
+               $h-side: if($horizontal == 'left', 'right', 'left');
+
+               border-#{$vertical}-width: $width;
+               border-#{$h-side}-width: $width;
+             }
+
+             &::after {
+               $v-side: if($vertical == 'top', 'bottom', 'top');
+
+               border-#{$v-side}-width: $width;
+               border-#{$horizontal}-width: $width;
+             }
+
+             &:hover {
+               color: $hover;
+
+               &::before,
+               &::after {
+                 border-color: $hover;
+                 transition: border-color 0s, width $duration, height $duration;
+                 width: 100%;
+                 height: 100%;
+               }
+
+               &::before { transition-delay: 0s, 0s, $duration; }
+
+               &::after { transition-delay: 0s, $duration, 0s; }
+             }
+           }
+
+           .draw-border {
+             @include btn-border-drawing(variables.$red, variables.$red, 2px, top, right);
+
+           }
+         }
+       }
+      }
+    }
+
+
+  }
+
+}
+
+}
+@media (min-width: 768px) and (max-width: 1280px) {
 
 
 }
