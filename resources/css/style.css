@@ -200,13 +200,37 @@ li {
 /**********************************FORM**************/
 .section-form {
   background-color: #1b1b1b;
-  width: 1920px;
-  height: 15rem;
+  height: 25rem;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: 1fr;
   grid-column-gap: 0px;
   grid-row-gap: 0px;
+}
+
+#f-name {
+  background-color: transparent;
+  border: none;
+}
+
+label {
+  color: white;
+  font-size: 20px;
+}
+
+#f-email {
+  background-color: transparent;
+  border: none;
+}
+
+#f-texte {
+  background-color: transparent;
+  border: none;
+}
+
+#hr {
+  width: 700px;
+  margin-left: 0px;
 }
 
 .form-title-one {
