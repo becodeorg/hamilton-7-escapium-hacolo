@@ -2,7 +2,8 @@
 @forward "components/_buttons.scss";
 @forward "pages/_rooms.scss";
 @forward "pages/_blogs.scss";
-@import "utilities/_variables.scss";
+@forward "pages/_singleblog.scss";
+@use "utilities/_variables.scss" as variables;
 
 @import url('https://fonts.googleapis.com/css2?family=Hind&display=swap');
 
@@ -15,5 +16,5 @@ p {
 }
 
 body {
-  background-color: $darkestBackground;
+  background-color: variables.$darkestBackground;
 }

@@ -1,0 +1,148 @@
+@forward "../components/_buttons.scss";
+@forward "../layout/_header.scss";
+@use "../utilities/_variables.scss" as variables;
+
+main {
+
+
+  .page__container {
+    margin: 10rem;
+
+    .main__divider {
+      display: flex;
+      flex-wrap: wrap;
+      max-width: 100%;
+
+      section {
+        max-width: 66.66%;
+        display: flex;
+        flex-direction: column;
+        gap: 6rem;
+
+        .post {
+
+
+
+          figure {
+            position: relative;
+            margin: 0px 4rem 0rem -4rem;
+            z-index: -1;
+
+            a {
+
+              img {
+                width: 100%;
+                height: 40rem;
+              }
+            }
+          }
+          .figure::before {
+            content: "";
+            display: block;
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            background-color: rgba(0,0,0,.2);
+            pointer-events: none;
+            z-index: 1;
+            transition: opacity .4s;
+          }
+
+          .post__div {
+            margin-top: -60px;
+            position: relative;
+            z-index: 2;
+            margin-left: 1.5rem;
+            background-color: #242424;
+            padding: 25px;
+            box-shadow: 0 10px 30px rgba(0,0,0,.5);
+
+            .post__content {
+
+              p {
+                margin-top: 0;
+                color: grey;
+                margin-bottom: 1rem;
+              }
+              .separator {
+                padding-top: 1.5rem;
+              }
+              h3 {
+                font-size: 1.5rem;
+                color: variables.$whiteBackground;
+                margin-bottom: 1.5rem;
+              }
+              figure {
+                margin: 0 auto 2rem;
+                max-width: 100%;
+
+                img {
+                  max-width: 100%;
+                  height: auto;
+                  vertical-align: center;
+                }
+                figcaption {
+                  margin-top: 0.4rem;
+                  text-align: center;
+                  color: grey;
+                }
+              }
+
+            }
+            .post__bottom {
+              margin-top: 2rem;
+              display: flex;
+              justify-content: center;
+              div {
+                a {
+                  @extend #nav__button;
+                  padding: 0.5rem 1rem 0.5rem 1rem;
+                  font-size: 0.80rem;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .div__post {
+    margin-left: 34px;
+    background-color: transparent;
+    border: 2px solid #242424;
+    padding: 2rem;
+
+    .div__post--header {
+      margin-left: -84px;
+      display: flex;
+      align-items: center;
+      padding-bottom: 2rem;
+      flex-wrap: wrap;
+
+      figure {
+        flex-shrink: 1;
+        margin: 0 1rem 0 0;
+        overflow: hidden;
+        border-radius: 50%;
+      }
+      .user__info {
+
+        h5 {
+          margin-bottom: .2em;
+          font-size: 1.25rem;
+        }
+
+        p {
+          margin-bottom: .2em;
+          font-size: 1.25rem;
+          font-family: "Montserrat", sans-serif;
+        }
+      }
+      .user__links {
+        margin-left: auto;
+      }
+    }
+  }
+}

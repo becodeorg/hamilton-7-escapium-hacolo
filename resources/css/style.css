@@ -54,7 +54,7 @@ table {
   border-spacing: 0;
 }
 
-#nav__button, main .page__container .main__divider section article .article__content a, main .main__level--container .main__ul li {
+#nav__button, main .page__container .main__divider section .post .post__div .post__bottom div a, main .page__container .main__divider section article .article__content a, main .main__level--container .main__ul li {
   border: 1px solid lightgray;
   padding: 1rem 2rem 1rem 2rem;
   border-radius: 3rem;
@@ -117,7 +117,7 @@ header nav .nav__div--right {
   right: 2rem;
   display: flex;
 }
-header nav .nav__div--right #nav__button, header nav .nav__div--right main .page__container .main__divider section article .article__content a, main .page__container .main__divider section article .article__content header nav .nav__div--right a, header nav .nav__div--right main .main__level--container .main__ul li, main .main__level--container .main__ul header nav .nav__div--right li {
+header nav .nav__div--right #nav__button, header nav .nav__div--right main .page__container .main__divider section .post .post__div .post__bottom div a, main .page__container .main__divider section .post .post__div .post__bottom div header nav .nav__div--right a, header nav .nav__div--right main .page__container .main__divider section article .article__content a, main .page__container .main__divider section article .article__content header nav .nav__div--right a, header nav .nav__div--right main .main__level--container .main__ul li, main .main__level--container .main__ul header nav .nav__div--right li {
   margin-right: 1rem;
 }
 header nav .nav__div--right .nav__ul--right {
@@ -909,6 +909,119 @@ main .page__container .main__divider .aside__photos .photos__container ul li:hov
     transition-delay: 0s, 0.25s, 0s;
   }
 }
+main .page__container {
+  margin: 10rem;
+}
+main .page__container .main__divider {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 100%;
+}
+main .page__container .main__divider section {
+  max-width: 66.66%;
+  display: flex;
+  flex-direction: column;
+  gap: 6rem;
+}
+main .page__container .main__divider section .post figure {
+  position: relative;
+  margin: 0px 4rem 0rem -4rem;
+  z-index: -1;
+}
+main .page__container .main__divider section .post figure a img {
+  width: 100%;
+  height: 40rem;
+}
+main .page__container .main__divider section .post .figure::before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.2);
+  pointer-events: none;
+  z-index: 1;
+  transition: opacity 0.4s;
+}
+main .page__container .main__divider section .post .post__div {
+  margin-top: -60px;
+  position: relative;
+  z-index: 2;
+  margin-left: 1.5rem;
+  background-color: #242424;
+  padding: 25px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+main .page__container .main__divider section .post .post__div .post__content p {
+  margin-top: 0;
+  color: grey;
+  margin-bottom: 1rem;
+}
+main .page__container .main__divider section .post .post__div .post__content .separator {
+  padding-top: 1.5rem;
+}
+main .page__container .main__divider section .post .post__div .post__content h3 {
+  font-size: 1.5rem;
+  color: #fefefe;
+  margin-bottom: 1.5rem;
+}
+main .page__container .main__divider section .post .post__div .post__content figure {
+  margin: 0 auto 2rem;
+  max-width: 100%;
+}
+main .page__container .main__divider section .post .post__div .post__content figure img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: center;
+}
+main .page__container .main__divider section .post .post__div .post__content figure figcaption {
+  margin-top: 0.4rem;
+  text-align: center;
+  color: grey;
+}
+main .page__container .main__divider section .post .post__div .post__bottom {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+}
+main .page__container .main__divider section .post .post__div .post__bottom div a {
+  padding: 0.5rem 1rem 0.5rem 1rem;
+  font-size: 0.8rem;
+}
+main .div__post {
+  margin-left: 34px;
+  background-color: transparent;
+  border: 2px solid #242424;
+  padding: 2rem;
+}
+main .div__post .div__post--header {
+  margin-left: -84px;
+  display: flex;
+  align-items: center;
+  padding-bottom: 2rem;
+  flex-wrap: wrap;
+}
+main .div__post .div__post--header figure {
+  flex-shrink: 1;
+  margin: 0 1rem 0 0;
+  overflow: hidden;
+  border-radius: 50%;
+}
+main .div__post .div__post--header .user__info h5 {
+  margin-bottom: 0.2em;
+  font-size: 1.25rem;
+}
+main .div__post .div__post--header .user__info p {
+  margin-bottom: 0.2em;
+  font-size: 1.25rem;
+  font-family: "Montserrat", sans-serif;
+}
+main .div__post .div__post--header .user__links {
+  margin-left: auto;
+}
+
 html {
   font-family: "Montserrat", sans-serif;
 }
