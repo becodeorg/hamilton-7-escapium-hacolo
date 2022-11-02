@@ -1,7 +1,7 @@
-@import "../utilities/variables";
+@use "../utilities/variables" as variable;
 
 .mainSingleRoom {
-  color: $globalFontColor;
+  color: variable.$globalFontColor;
 }
 .EscapePresentation {
   background: linear-gradient(
@@ -23,11 +23,11 @@
 }
 h1 {
   font-size: 32px;
-  font-family: $MontSerraH1;
+  font-family: variable.$MontSerraH1;
 }
 .EscapeDetails {
-  background-color: $darkestBackground;
-  font-family: $Hind;
+  background-color: variable.$darkestBackground;
+  font-family: variable.$Hind;
   padding-left: 15px;
   padding-right: 15px;
   height: 700px;
@@ -61,16 +61,16 @@ h1 {
     justify-content: flex-start;
     align-items: center;
     height: 37px;
-    border-bottom: solid $darkBackground 2px;
-    color: $whiteBackground;
+    border-bottom: solid variable.$darkBackground 2px;
+    color: variable.$whiteBackground;
   }
   &__button {
     padding: 1rem 2rem 1rem 2rem;
     border-radius: 3rem;
     text-decoration: none;
-    color: $whiteBackground;
+    color: variable.$whiteBackground;
     font-weight: 700;
-    background-color: $red;
+    background-color: variable.$red;
     width: 100px;
     margin-top: 20px;
   }
@@ -85,26 +85,26 @@ h1 {
   width: 49px;
 }
 .WhiteColor {
-  color: $whiteBackground;
+  color: variable.$whiteBackground;
 }
 .RedColor {
-  color: $red;
+  color: variable.$red;
 }
 .borderRight {
-  border-right: solid $darkBackground 2px;
+  border-right: solid variable.$darkBackground 2px;
 }
 .Margincontact {
   margin-right: 15px;
 }
-hr {
+.hrSingle {
   width: 10%;
   height: 3px;
   margin: auto;
-  background-color: $globalFontColor;
+  background-color: variable.$globalFontColor;
   border-radius: 4%;
 }
 .Booking {
-  background-color: $darkBackground;
+  background-color: variable.$darkBackground;
   height: 560px;
   padding-top: 40px;
   &__title {
@@ -113,7 +113,7 @@ hr {
     margin-right: auto;
     text-align: center;
     color: white;
-    font-family: $MontSerraH1;
+    font-family: variable.$MontSerraH1;
     font-size: 21px;
   }
   &__calendar {
@@ -123,11 +123,11 @@ hr {
     margin-right: auto;
     margin-top: 40px;
     box-shadow: 2px 9px 20px 5px rgba(0, 0, 0, 0.75);
-    border: solid $globalFontColor 1px;
+    border: solid variable.$globalFontColor 1px;
   }
 }
 .otherRoom {
-  background-color: $darkestBackground;
+  background-color: variable.$darkestBackground;
   height: 500px;
   &__title {
     margin-left: 10px;
@@ -175,5 +175,5 @@ hr {
   }
 }
 .grayColor {
-  color: $globalFontColor;
+  color: variable.$globalFontColor;
 }

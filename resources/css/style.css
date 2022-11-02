@@ -231,7 +231,7 @@ h1 {
   margin-right: 15px;
 }
 
-hr {
+.hrSingle {
   width: 10%;
   height: 3px;
   margin: auto;
@@ -309,6 +309,69 @@ hr {
 
 .grayColor {
   color: #717171;
+}
+
+footer {
+  background: linear-gradient(0deg, rgba(27, 27, 27, 0.95) 10%, rgba(27, 27, 27, 0.95) 100%), url("../images/room-7.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #717171;
+  font-family: Hind;
+  font-size: 0.8em;
+}
+
+.sectionFooter {
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 40px;
+  line-height: 17px;
+}
+.sectionFooter__padding {
+  margin-left: 16px;
+}
+.sectionFooter__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 75px);
+  grid-template-rows: repeat(7, 30px);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  margin-top: 20px;
+}
+.sectionFooter__flex {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+.sectionFooter__flex--redLine {
+  margin-left: 7px;
+  height: 1px;
+  background-color: #f60b0e;
+  width: 20px;
+  display: block;
+}
+.sectionFooter__flexAdress {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 165px;
+  margin-left: 16px;
+}
+.sectionFooter__flexAdress--title {
+  margin-top: 20px;
+  font-size: 1.5em;
+  color: white;
+  font-weight: bolder;
+}
+.sectionFooter__flexAdress--whitecolor {
+  color: white;
+}
+.sectionFooter__flexAdress--list {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 175px;
+  margin-top: 20px;
 }
 
 /*# sourceMappingURL=style.css.map */
