@@ -293,10 +293,10 @@ h1 {
   height: 350px;
   margin-left: auto;
   margin-right: auto;
-  background: linear-gradient(0deg, rgb(0, 0, 0) 5%, rgba(27, 27, 27, 0) 40%), url("../images/room-8.jpg");
+  background: linear-gradient(0deg, rgb(0, 0, 0) 5%, rgba(27, 27, 27, 0) 100%), url("../images/room-8.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  box-shadow: 2px 4px 20px 5px rgba(0, 0, 0, 0.75);
+  box-shadow: 2px 9px 20px 5px rgba(0, 0, 0, 0.75);
 }
 .otherRoom__room--flex {
   color: white;
@@ -306,11 +306,42 @@ h1 {
   width: 190px;
   font-size: smaller;
 }
-
 .grayColor {
   color: #717171;
 }
 
+@media screen and (min-width: 768px) and (max-width: 1599px) {
+  .EscapePresentation {
+    height: 550px;
+  }
+  .EscapePresentation__title {
+    margin-left: 51px;
+    padding-top: 326px;
+  }
+  h1 {
+    font-size: 4em;
+  }
+  .responsiveWidth {
+    width: 220px;
+  }
+  .EscapeDetails {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 482px;
+    padding-left: 50px;
+  }
+  .EscapeDetails__grid {
+    grid-template-columns: repeat(3, 150px);
+  }
+  .EscapeDetails__text {
+    width: 425px;
+    height: 290px;
+  }
+  .EscapeDetails__button {
+    margin-top: 35px;
+  }
+}
 footer {
   background: linear-gradient(0deg, rgba(27, 27, 27, 0.95) 10%, rgba(27, 27, 27, 0.95) 100%), url("../images/room-7.jpg");
   background-repeat: no-repeat;

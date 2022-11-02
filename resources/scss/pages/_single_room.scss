@@ -158,12 +158,12 @@ h1 {
     background: linear-gradient(
         0deg,
         rgba(0, 0, 0, 1) 5%,
-        rgba(27, 27, 27, 0) 40%
+        rgba(27, 27, 27, 0) 100%
       ),
       url("../images/room-8.jpg");
     background-repeat: no-repeat;
     background-size: cover;
-    box-shadow: 2px 4px 20px 5px rgba(0, 0, 0, 0.75);
+    box-shadow: 2px 9px 20px 5px rgba(0, 0, 0, 0.75);
     &--flex {
       color: white;
       display: flex;
@@ -172,8 +172,44 @@ h1 {
       width: 190px;
       font-size: smaller;
     }
+    &--Bunker {
+    }
+    &--BackTTFuture {
+    }
   }
 }
 .grayColor {
   color: variable.$globalFontColor;
+}
+@media screen and (min-width: 768px) and (max-width: 1599px) {
+  .EscapePresentation {
+    height: 550px;
+    &__title {
+      margin-left: 51px;
+      padding-top: 326px;
+    }
+  }
+  h1 {
+    font-size: 4em;
+  }
+  .responsiveWidth {
+    width: 220px;
+  }
+  .EscapeDetails {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 482px;
+    padding-left: 50px;
+    &__grid {
+      grid-template-columns: repeat(3, 150px);
+    }
+    &__text {
+      width: 425px;
+      height: 290px;
+    }
+    &__button {
+      margin-top: 35px;
+    }
+  }
 }
