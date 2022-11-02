@@ -12,6 +12,13 @@ footer {
   font-family: variable.$Hind;
   font-size: 0.8em;
 }
+.linkFooter {
+  color: variable.$globalFontColor;
+  text-decoration: none;
+  &:hover {
+    color: white;
+  }
+}
 .sectionFooter {
   padding-left: 15px;
   padding-right: 15px;

@@ -320,6 +320,14 @@ footer {
   font-size: 0.8em;
 }
 
+.linkFooter {
+  color: #717171;
+  text-decoration: none;
+}
+.linkFooter:hover {
+  color: white;
+}
+
 .sectionFooter {
   padding-left: 15px;
   padding-right: 15px;
