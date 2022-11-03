@@ -167,10 +167,24 @@ p{
   color: #717171;
   font-size: 3rem;
   padding-left: 130px;
+  margin-top: 100px;
+}
+
+a.form-mailto:hover,a.form-mailto:active {
+  color: red;
 }
 
 li {
   color: #717171;
+  margin-bottom: 100px;
+}
+.fa-regular {
+  color: aliceblue;
+  font-size: 80px;
+}
+.fa-solid{
+  color: aliceblue;
+    font-size: 80px;
 }
 
 .form-ul{
@@ -181,6 +195,7 @@ li {
   flex-wrap: nowrap;
   align-items: flex-start;
   padding-left: 130px;
+  margin-top: 150px;
 }
 
 
