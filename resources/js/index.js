@@ -64,8 +64,8 @@ function createElement(type, parent, classList) {
     return element;
 }
 
-const hamburger = document.querySelector(".hamburger");
-const navMenu = document.querySelector(".nav-menu");
+const hamburger = document.querySelector(".navigation__burger");
+const navMenu = document.querySelector(".navigation__ul");
 
 hamburger.addEventListener("click", () => {
     hamburger.classList.toggle("active");
