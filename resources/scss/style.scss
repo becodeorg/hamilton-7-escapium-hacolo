@@ -172,16 +172,6 @@ li{
       //margin-right:80px;
       margin-top: 50px;
     }
-}
-
-
-
-
-
-
-
-
-
 
 #form-button {
   color: variable.$whiteBackground;
@@ -205,23 +195,23 @@ li{
   background-color: variable.$red;
 }
 
-
-
-
-
-
-
 .form-mailto{
   color: variable.$whiteBackground;
   text-decoration: none;
 }
 
-a.form-mailto:hover,a.form-mailto:active {
+a.mailto:hover,
+a.mailto:active {
   color: variable.$red;
 }
 
-
+a.form-mailto:hover,a.form-mailto:active {
+  color: variable.$red;
+}
+}
 }/*fermeture de section form*/
+
+
 
 /*
 @media only screen and (max-width: 524px) {

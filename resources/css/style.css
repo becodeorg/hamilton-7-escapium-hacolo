@@ -288,7 +288,7 @@ li {
   width: 350px;
   margin-top: 50px;
 }
-.section-form #form-button {
+.section-form .form-contact #form-button {
   color: #fefefe;
   background-color: #F60B0E;
   border: none;
@@ -304,15 +304,19 @@ li {
   cursor: pointer;
   margin-top: 10rem;
 }
-.section-form #form-button :hover {
+.section-form .form-contact #form-button :hover {
   opacity: 1;
   background-color: #F60B0E;
 }
-.section-form .form-mailto {
+.section-form .form-contact .form-mailto {
   color: #fefefe;
   text-decoration: none;
 }
-.section-form a.form-mailto:hover, .section-form a.form-mailto:active {
+.section-form .form-contact a.mailto:hover,
+.section-form .form-contact a.mailto:active {
+  color: #F60B0E;
+}
+.section-form .form-contact a.form-mailto:hover, .section-form .form-contact a.form-mailto:active {
   color: #F60B0E;
 }
 
