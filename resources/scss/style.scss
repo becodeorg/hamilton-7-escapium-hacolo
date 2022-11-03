@@ -60,71 +60,128 @@ display: flex;
   align-items: center;
   align-content: space-between;
 }
-
 li{
   color: variable.$whiteBackground;
 }
 
+
 /**********************************FORM**************/
+
 .section-form{
   background-color: variable.$darkestBackground;
-  height: 1200px;
-  //width: 1920px;
-  //height: 25rem;
+  height: 100%;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+
+    .form-title-one {
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+      margin-left: 90px;
+
+    .form-title-h2 {
+      color: variable.$whiteBackground;
+      font-weight: 800;
+      font-size: 90px;
+      padding-left: 250px;
+      padding-top: 70px;
+    }
+    p {
+      color: variable.$globalFontColor;
+      font-size: 3rem;
+      padding-left: 130px;
+      margin-top: 100px;
+    }
+
+    .form-ul {
+      color: variable.$globalFontColor;
+      font-size: 3rem;
+      display: flex;
+      flex-direction: column;
+      flex-wrap: nowrap;
+      align-items: flex-start;
+      padding-left: 130px;
+      margin-top: 150px;
+    
+        li {
+          color: variable.$globalFontColor;
+          margin-bottom: 100px;
+          word-spacing: 2rem;
+        }
+
+        .fa-regular {
+          color: variable.$whiteBackground;
+          font-size: 80px;
+        }
+
+        .fa-solid {
+          color: variable.$whiteBackground;
+          font-size: 80px;
+        }
+    }
 }
 
-.items-name-email{
-display: flex;
-flex-direction: row;
-margin-top: 200px;
-}
-
-#f-name{
-  background-color: transparent;
-  border: none;
-}
-
-label{
-  color: variable.$whiteBackground;
-  font-size: 20px;
-}
-
-#f-email {
-  background-color: transparent;
-  border: none;
-}
-.message{
-  margin-top: 200px;
-}
 
 
+/*2 EME DIV */
 
-#f-texte {
-  background-color: transparent;
-  border: none;
-  margin-top: 200px;
-}
-
-#hr{
-  width: 350px;
-  margin-right:80px;
-  margin-top: 50px;
-  
-}
-.form-title-one{
-  display: flex;
-  flex-direction: column;
-  align-items: stretch;
-  margin-left: 90px;
-
-}
-
-.form-contact{
+.form-contact {
   padding: 20px;
-  
+
+    .form-title-h3 {
+      color: variable.$whiteBackground;
+      font-weight: 800;
+      font-size: 90px;
+      padding-top: 50px;
+    }
+    .container-formualire {
+        margin-top: 200px;
+      }
+
+    .items-name-email{
+    display: flex;
+    flex-direction: row;
+    margin-top: 200px;
+    }
+
+    #f-name{
+      background-color: transparent;
+      border: none;
+    }
+
+    #f-email {
+      background-color: transparent;
+      border: none;
+    }
+      
+    .message{
+      margin-top: 200px;
+    }
+        #f-texte {
+          background-color: transparent;
+          border: none;
+          margin-top: 200px;
+        }
+
+    label {
+      color: variable.$whiteBackground;
+      font-size: 50px;
+    }
+    #hr {
+      width: 350px;
+      //margin-right:80px;
+      margin-top: 50px;
+    }
 }
+
+
+
+
+
+
+
+
+
 
 #form-button {
   color: variable.$whiteBackground;
@@ -147,37 +204,12 @@ label{
   opacity: 1;
   background-color: variable.$red;
 }
-/*
-.form{
-  background-color: #1b1b1b;
-  width: 1920px;;
-  height: 15rem;
-}*/
 
-.form-title-h2{
-  color: variable.$whiteBackground;
-  font-weight: 800;
-  font-size: 90px;
-  padding-left: 250px;
-  padding-top: 70px;
-}
-.container-formualire{
-  margin-top: 200px;
-}
 
-.form-title-h3 {
-  color: variable.$whiteBackground;
-  font-weight: 800;
-  font-size: 90px;
-  padding-top: 50px;
-}
 
-p{
-  color:variable.$globalFontColor;
-  font-size: 3rem;
-  padding-left: 130px;
-  margin-top: 100px;
-}
+
+
+
 
 .form-mailto{
   color: variable.$whiteBackground;
@@ -188,31 +220,8 @@ a.form-mailto:hover,a.form-mailto:active {
   color: variable.$red;
 }
 
-li {
-  color: variable.$globalFontColor;
-  margin-bottom: 100px;
-  word-spacing: 2rem;
-}
-.fa-regular {
-  color: variable.$whiteBackground;
-  font-size: 80px;
-}
-.fa-solid{
-  color: variable.$whiteBackground;
-    font-size: 80px;
-}
 
-.form-ul{
-  color: variable.$globalFontColor;
-  font-size: 3rem;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  align-items: flex-start;
-  padding-left: 130px;
-  margin-top: 150px;
-}
-
+}/*fermeture de section form*/
 
 /*
 @media only screen and (max-width: 524px) {
