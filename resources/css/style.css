@@ -178,28 +178,44 @@ table {
   display: flex;
   flex-direction: row;
   width: 100%;
-  height: 3em;
+  height: 4em;
   font-family: "Hind", sans-serif;
   background-color: rgba(22, 22, 22, 0.5);
   z-index: 99;
+  align-content: center;
 }
-.navigation .fa-calendar {
-  color: whitesmoke;
+.navigation .nav__div--right {
   position: fixed;
-  right: 6em;
-  top: 0.9em;
+  right: 2rem;
+  display: flex;
 }
-.navigation .fa-magnifying-glass {
-  color: whitesmoke;
-  position: fixed;
-  right: 4em;
-  top: 0.9em;
+.navigation .nav__div--right #nav__button, .navigation .nav__div--right main .page__container .main__divider .main__section .post .post__div .post__bottom div a, main .page__container .main__divider .main__section .post .post__div .post__bottom div .navigation .nav__div--right a, .navigation .nav__div--right main .page__container .main__divider section article .article__content a, main .page__container .main__divider section article .article__content .navigation .nav__div--right a, .navigation .nav__div--right main .main__level--container .main__ul li, main .main__level--container .main__ul .navigation .nav__div--right li {
+  margin-right: 1rem;
+}
+.navigation .nav__div--right .nav__ul--right {
+  color: #fefefe;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.navigation .nav__div--right .nav__ul--right .nav__right--search i {
+  display: inline-block;
+  margin-right: 0.5rem;
+}
+.navigation .nav__div--right .nav__ul--right .nav__right--search .calendar {
+  display: none;
+}
+.navigation .nav__div--right .nav__ul--right .nav__right--login {
+  padding-left: 1rem;
+  border-left: 1px solid rgba(255, 255, 255, 0.5);
+  height: 1em;
+  text-transform: uppercase;
 }
 .navigation__ul {
   background-color: #1B1B1B;
   display: flex;
   flex-direction: column;
-  position: absolute;
+  position: fixed;
   height: 100vh;
   list-style: none;
   color: lightgray;
@@ -243,7 +259,7 @@ table {
 .navigation__burger {
   cursor: pointer;
   height: fit-content;
-  position: absolute;
+  position: fixed;
   right: 1em;
   top: 0.5em;
 }
@@ -280,27 +296,20 @@ table {
 
 @media (min-width: 769px) {
   .navigation {
-    height: 4.5em;
+    height: 4rem;
+    width: 100%;
+    display: flex;
+    position: fixed;
+    align-items: center;
+  }
+  .navigation img {
+    height: 4rem;
   }
   .navigation .fa-calendar {
     display: none;
   }
   .navigation__burger {
     display: none;
-  }
-  .navigation__button {
-    display: inline-block;
-    background-color: rgba(22, 22, 22, 0.5);
-    height: fit-content;
-    text-decoration: none;
-    position: absolute;
-    right: 1em;
-    top: 1.3em;
-    padding: 0.5em 1.5em 0.5em 1.5em;
-    border-radius: 1.5em;
-    border: dotted 1px #777;
-    color: white;
-    font-size: 0.8em;
   }
   .navigation__ul {
     margin-left: 0%;
@@ -314,21 +323,6 @@ table {
   .navigation__ul__li {
     border: none;
     text-transform: lowercase;
-  }
-}
-@media (min-width: 1920px) {
-  .navigation {
-    height: 9em;
-  }
-  .navigation__ul {
-    left: 34em;
-    top: 2.5em;
-  }
-  .navigation__ul__li {
-    font-size: 2.3em;
-  }
-  .navigation__button {
-    font-size: 1.7em;
   }
 }
 .section__top {
