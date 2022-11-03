@@ -1,5 +1,6 @@
 @forward "base/_reset.scss";
 @forward "pages/_contact.scss";
+@use "utilities/_variables.scss" as variable;
 
 
 .header:after {
@@ -26,7 +27,7 @@
   }
 
 .header-contact {
-  color:white;
+  color: variable.$whiteBackground;
   width: 12rem;
   height: 6rem;
   text-align: center;
@@ -45,7 +46,7 @@
 }
 
 #header-point {
-  color: #F60B0E ;/*$red*/
+  color: variable.$red;
   font-weight: 900;
     font-size: 5rem;
     text-align: center;
@@ -61,12 +62,12 @@ display: flex;
 }
 
 li{
-  color: aliceblue;
+  color: variable.$whiteBackground;
 }
 
 /**********************************FORM**************/
 .section-form{
-  background-color: #1b1b1b;
+  background-color: variable.$darkestBackground;
   height: 1200px;
   //width: 1920px;
   //height: 25rem;
@@ -77,6 +78,7 @@ li{
 .items-name-email{
 display: flex;
 flex-direction: row;
+margin-top: 200px;
 }
 
 #f-name{
@@ -85,7 +87,7 @@ flex-direction: row;
 }
 
 label{
-  color: white;
+  color: variable.$whiteBackground;
   font-size: 20px;
 }
 
@@ -93,15 +95,22 @@ label{
   background-color: transparent;
   border: none;
 }
+.message{
+  margin-top: 200px;
+}
+
+
 
 #f-texte {
   background-color: transparent;
   border: none;
+  margin-top: 200px;
 }
 
 #hr{
   width: 350px;
-  margin-left: 0px;
+  margin-right:80px;
+  margin-top: 50px;
   
 }
 .form-title-one{
@@ -118,8 +127,8 @@ label{
 }
 
 #form-button {
-  color: rgb(233 237 233);
-    background-color: #F60B0E;
+  color: variable.$whiteBackground;
+    background-color: variable.$red;
     border: none;
     border-radius: 28px;
     padding: 25px 650px;
@@ -136,7 +145,7 @@ label{
 }
 #form-button :hover {
   opacity: 1;
-  background-color: #F60B0E;
+  background-color: variable.$red;
 }
 /*
 .form{
@@ -146,54 +155,55 @@ label{
 }*/
 
 .form-title-h2{
-  color: rgb(245, 237, 237);
+  color: variable.$whiteBackground;
   font-weight: 800;
   font-size: 90px;
   padding-left: 250px;
   padding-top: 70px;
 }
 .container-formualire{
-  marging-top: 200px;
+  margin-top: 200px;
 }
 
 .form-title-h3 {
-  color: white;
+  color: variable.$whiteBackground;
   font-weight: 800;
   font-size: 90px;
   padding-top: 50px;
 }
 
 p{
-  color: #717171;
+  color:variable.$globalFontColor;
   font-size: 3rem;
   padding-left: 130px;
   margin-top: 100px;
 }
 
 .form-mailto{
-  color:aliceblue;
+  color: variable.$whiteBackground;
   text-decoration: none;
 }
 
 a.form-mailto:hover,a.form-mailto:active {
-  color: red;
+  color: variable.$red;
 }
 
 li {
-  color: #717171;
+  color: variable.$globalFontColor;
   margin-bottom: 100px;
+  word-spacing: 2rem;
 }
 .fa-regular {
-  color: aliceblue;
+  color: variable.$whiteBackground;
   font-size: 80px;
 }
 .fa-solid{
-  color: aliceblue;
+  color: variable.$whiteBackground;
     font-size: 80px;
 }
 
 .form-ul{
-  color: #717171;
+  color: variable.$globalFontColor;
   font-size: 3rem;
   display: flex;
   flex-direction: column;
@@ -223,7 +233,7 @@ li {
 /*************************IMAGE SATELLITE ***************/
 .img-satellite{
   height:30rem;
-  background-color: aqua;
+  background-color: variable.$darkBackground;
   position: relative;
 }
 .key{
@@ -236,9 +246,8 @@ li {
 
 /***************************ADRESSE*********************/
 a.mailto:hover,a.mailto:active{
-      color: red;
+      color: variable.$red;
 }
-
 
 
 /*************************IMAGE EXIT ***************/
@@ -284,7 +293,7 @@ a.mailto:hover,a.mailto:active{
 
 
 #title-h4{
-  color:white;
+  color: variable.$whiteBackground;
   font-weight: 600;
   //opacity: 0.5;
   display: flex;
