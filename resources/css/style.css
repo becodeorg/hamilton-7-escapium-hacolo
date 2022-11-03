@@ -423,10 +423,65 @@ table {
   background: linear-gradient(90deg, #222222 30%, rgba(27, 27, 27, 0.1) 60%), url("../images/room-7.jpg");
   background-repeat: no-repeat;
   background-size: contain;
-  height: 300px;
+  height: 296px;
+  font-size: 1.6em;
 }
 .aiming__responsivePart {
   display: none;
+}
+.aiming__flex {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 75%;
+  color: white;
+  padding-top: 38px;
+}
+
+.logoAiming {
+  color: #f60b0e;
+  margin-left: 55px;
+  margin-right: 10px;
+}
+
+.photo {
+  background-color: #1b1b1b;
+  padding-top: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 35px;
+  line-height: 20px;
+}
+.photo__button {
+  border: 1px solid lightgray;
+  padding: 1rem 2rem 1rem 2rem;
+  border-radius: 3rem;
+  text-decoration: none;
+  color: white;
+  font-weight: 700;
+  width: 173px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+}
+.photo__img {
+  width: 182px;
+  height: 182px;
+  margin: 2px;
+}
+.photo__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+}
+
+.bookingButton {
+  margin-left: auto;
+  margin-right: auto;
+  width: 142px;
+  margin-top: 55px;
 }
 
 .mainSingleRoom {
