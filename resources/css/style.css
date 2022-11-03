@@ -133,6 +133,302 @@ table {
   border-spacing: 0;
 }
 
+.homepage {
+  color: #717171;
+  font-family: Hind;
+}
+
+.HomepageView {
+  background: linear-gradient(0deg, rgb(27, 27, 27) 10%, rgba(27, 27, 27, 0) 100%), url("../images/slide-4.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 280px;
+}
+.HomepageView__flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100%;
+}
+.HomepageView__flex--h1 {
+  font-family: Montserrat;
+  color: white;
+  width: 162px;
+  font-size: 1.8em;
+  margin-bottom: 23px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.HomepageView__flex--h2 {
+  color: white;
+  font-size: 0.8em;
+}
+
+.featuredRoom {
+  background-color: #1b1b1b;
+  padding-top: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 5px;
+  line-height: 20px;
+}
+.featuredRoom__border {
+  box-shadow: 2px 9px 20px 5px rgba(0, 0, 0, 0.75);
+  margin-bottom: 65px;
+}
+.featuredRoom__paddings {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 380px;
+}
+.featuredRoom__paddings--grid {
+  display: grid;
+  grid-template-columns: repeat(5, 20px);
+  grid-template-rows: 1fr;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+}
+.featuredRoom__paddings--flex {
+  color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 190px;
+  font-size: smaller;
+}
+.featuredRoom__hr {
+  width: 9%;
+  height: 4px;
+  margin: auto;
+  background-color: #717171;
+  border-radius: 4%;
+}
+.featuredRoom__buttonReadmore {
+  padding: 1rem 2rem 1rem 2rem;
+  border-radius: 3rem;
+  text-decoration: none;
+  color: #fefefe;
+  font-weight: 700;
+  background-color: #f60b0e;
+  width: 100px;
+  margin-top: 20px;
+  text-align: center;
+}
+.featuredRoom__Imporium {
+  height: 250px;
+  background: linear-gradient(0deg, rgba(27, 27, 27, 0.6) 0%, rgba(27, 27, 27, 0.6) 100%), url("../images/slide-2.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.featuredRoom__Cure {
+  height: 250px;
+  background: linear-gradient(0deg, rgba(27, 27, 27, 0.6) 0%, rgba(27, 27, 27, 0.6) 100%), url("../images/room-2.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.featuredRoom__Burlesque {
+  height: 250px;
+  background: linear-gradient(0deg, rgba(27, 27, 27, 0.6) 0%, rgba(27, 27, 27, 0.6) 100%), url("../images/room-3.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.featuredRoom__h1 {
+  color: white;
+  font-size: 1.5em;
+  margin-bottom: 16px;
+}
+
+.h1modifier {
+  width: 256px;
+  margin-top: 35px;
+  margin-bottom: 65px;
+  text-align: center;
+  font-size: 1.4em;
+}
+
+.h1modifierExplanation {
+  width: 256px;
+  margin-top: 35px;
+  margin-bottom: 20px;
+  text-align: center;
+  font-size: 1.4em;
+}
+
+.RedColor {
+  color: #f60b0e;
+}
+
+.grayColor {
+  color: #717171;
+}
+
+.Explanation {
+  background-color: #222222;
+  padding-top: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 5px;
+  text-align: center;
+}
+.Explanation__p {
+  line-height: 20px;
+  margin-bottom: 70px;
+}
+.Explanation__logo {
+  color: white;
+  height: 85px;
+  width: 85px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  border: solid #717171 2.5px;
+  font-size: 2em;
+  position: relative;
+  z-index: 3;
+}
+.Explanation__logo::after {
+  content: "";
+  position: absolute;
+  margin-left: 50%;
+  height: 113px;
+  width: 1.5px;
+  background-color: #717171;
+  top: -18%;
+  left: 0%;
+  transform: translateX(-50%) rotate(-150deg) scaleY(1);
+  z-index: -1;
+}
+
+.transverse {
+  display: block;
+  width: 32px;
+  height: 32px;
+  padding: 26.5px;
+  background-color: #222222;
+  border-radius: 50%;
+  position: absolute;
+  z-index: 1;
+}
+
+.testimonial {
+  background-color: #fefefe;
+  padding-top: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 35px;
+  line-height: 20px;
+  text-align: center;
+}
+.testimonial__name {
+  color: #222222;
+  font-weight: bolder;
+}
+.testimonial__quote {
+  line-height: 25px;
+  font-size: 1.2em;
+}
+.testimonial__profil {
+  margin-top: 10px;
+  margin: 10px;
+}
+
+.blogspots {
+  background-color: #1b1b1b;
+  padding-top: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 35px;
+  line-height: 20px;
+}
+.blogspots__paragraphe {
+  font-size: 0.8em;
+  margin-bottom: 40px;
+}
+.blogspots__title {
+  color: white;
+  font-family: Montserrat;
+  margin-bottom: 20px;
+}
+.blogspots__hr {
+  width: 9%;
+  height: 4px;
+  background-color: #717171;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+.blogspots__resume {
+  color: #222222;
+  font-size: 0.85em;
+}
+.blogspots__profile {
+  border: #ebebeb solid 3px;
+  border-radius: 50%;
+  width: 34px;
+  height: 34px;
+  overflow: hidden;
+  margin-left: 20px;
+  margin-right: 10px;
+}
+.blogspots__profile--flex {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-top: 150px;
+}
+.blogspots__profile--p {
+  color: white;
+  font-size: 0.8em;
+  font-weight: bolder;
+}
+.blogspots__redSubtitles {
+  color: #f60b0e;
+  text-decoration: underline;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  margin-top: -45px;
+  margin-bottom: 50px;
+}
+.blogspots__blogOne {
+  background: linear-gradient(0deg, #1b1b1b 15%, rgba(27, 27, 27, 0.1) 40%), url("../images/post-img-2.jpg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 278px;
+}
+.blogspots__blogTwo {
+  background: linear-gradient(0deg, #1b1b1b 15%, rgba(27, 27, 27, 0.2) 40%), url("../images/room-7.jpg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 269px;
+}
+.blogspots__blogThree {
+  background: linear-gradient(0deg, #1b1b1b 15%, rgba(27, 27, 27, 0.2) 40%), url("../images/room-9.jpg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 278px;
+}
+
+.darkolor {
+  color: #1b1b1b;
+  margin-bottom: 50px;
+}
+
+.aiming {
+  background: linear-gradient(90deg, #222222 30%, rgba(27, 27, 27, 0.1) 60%), url("../images/room-7.jpg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 300px;
+}
+.aiming__responsivePart {
+  display: none;
+}
+
 .mainSingleRoom {
   color: #717171;
 }
