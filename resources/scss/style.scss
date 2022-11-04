@@ -2,4 +2,23 @@
 @forward "./pages/homepage";
 @forward "./pages/single_room";
 @forward "./pages/footer";
-@import "./utilities/variables";
+@forward "components/_buttons.scss";
+@forward "pages/_rooms.scss";
+@forward "pages/_blogs.scss";
+@forward "pages/_singleblog.scss";
+@use "utilities/_variables.scss" as variables;
+
+@import url('https://fonts.googleapis.com/css2?family=Hind&display=swap');
+
+html {
+  overflow-x: hidden;
+}
+
+p {
+  font-family: 'Hind', sans-serif !important;
+}
+
+body {
+  background-color: variables.$darkestBackground;
+}
+

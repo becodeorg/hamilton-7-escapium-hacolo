@@ -1,0 +1,207 @@
+@use "../utilities/variables" as variable;
+footer {
+  background: linear-gradient(
+                  0deg,
+                  rgba(27, 27, 27, 0.95) 10%,
+                  rgba(27, 27, 27, 0.95) 100%
+  ),
+  url("../images/room-7.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: variable.$globalFontColor;
+  font-family: variable.$Hind;
+  font-size: 0.8em;
+}
+.linkFooter {
+  color: variable.$globalFontColor;
+  text-decoration: none;
+  &:hover {
+    color: white;
+  }
+}
+.sectionFooter {
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 40px;
+  line-height: 17px;
+  &__copyright {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    &--p {
+      margin-top: 5px;
+      margin-bottom: 40px;
+    }
+  }
+  &__hr {
+    opacity: 0.1;
+  }
+  &__padding {
+    margin-left: 16px;
+  }
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(2, 90px);
+    grid-template-rows: repeat(7, 30px);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    margin-top: 20px;
+  }
+  &__flex {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+
+    &--redLine {
+      margin-left: 7px;
+      height: 1px;
+      background-color: variable.$red;
+      width: 20px;
+      display: block;
+    }
+  }
+  &__flexAdress {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 165px;
+
+    margin-left: 16px;
+
+    &--title {
+      margin-top: 20px;
+      font-size: 1.5em;
+      color: white;
+      font-weight: bolder;
+    }
+    &--whitecolor {
+      color: white;
+    }
+    &--list {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 175px;
+      margin-top: 20px;
+    }
+  }
+  &__flexSocial {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    margin-bottom: 50px;
+    &--logo {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      font-size: 1.4em;
+      margin-right: 10px;
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      background-color: variable.$darkBackground;
+      &:hover {
+        background-color: variable.$red;
+        cursor: pointer;
+      }
+    }
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1599px) {
+  .responsiveTitle {
+    width: 60px;
+  }
+  .responsiveFLex {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    margin-bottom: 30px;
+    margin-left: 30px;
+  }
+  .sectionFooter {
+    margin-right: 15px;
+    &__grid {
+      display: grid;
+      grid-template-columns: repeat(2, 50px);
+      grid-template-rows: repeat(7, 50px);
+      grid-column-gap: 40px;
+      grid-row-gap: 0px;
+      margin-top: 20px;
+    }
+    &__flexSocial {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(3, 1fr);
+      grid-column-gap: 0px;
+      grid-row-gap: 0px;
+
+      &--logo {
+        margin-bottom: 15px;
+      }
+    }
+    &__flexAdress {
+      height: 240px;
+      &--list {
+        height: 222px;
+
+        width: 98px;
+      }
+    }
+  }
+}
+@media screen and (min-width: 1600px) and (max-width: 1920px) {
+  .sectionFooter {
+    width: 250px;
+    font-size: 1.3em;
+    line-height: 22px;
+    padding-top: 118px;
+    &__copyright {
+      &--p {
+        margin-top: 20px;
+      }
+    }
+    &__flexSocial {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(2, 70px);
+      grid-column-gap: 0px;
+      grid-row-gap: 0px;
+      align-items: center;
+      &--logo {
+        width: 50px;
+        height: 50px;
+      }
+    }
+    &__grid {
+      display: grid;
+      grid-template-columns: repeat(2, 130px);
+      grid-template-rows: repeat(7, 55px);
+    }
+    &__flexAdress {
+      height: 223px;
+      &--list {
+        height: 265px;
+      }
+    }
+  }
+  .responsiveFLex {
+    display: grid;
+    grid-template-columns: repeat(5, 300px);
+    grid-template-rows: 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    margin-bottom: 30px;
+    margin-left: 400px;
+  }
+  .logoResponsive {
+    width: 1920px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+}
