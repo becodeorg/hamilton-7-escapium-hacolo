@@ -210,7 +210,7 @@ h1 {
 .grayColor {
   color: variable.$globalFontColor;
 }
-@media screen and (min-width: 600px) and (max-width: 1599px) {
+@media screen and (min-width: 600px) {
   .mainSingleRoom {
     padding: 0%;
   }
@@ -280,6 +280,69 @@ h1 {
         width: 220px;
         height: 220px;
         display: block;
+      }
+    }
+  }
+}
+@media (min-width: 1600px) and (max-width: 1920px) {
+  .EscapePresentation {
+    background-size: cover;
+    height: 800px;
+    &__title {
+      margin-left: 100px;
+      padding-top: 500px;
+      font-size: 5em;
+    }
+  }
+  .EscapeDetails {
+    &__grid {
+      grid-template-columns: repeat(3, 1fr) !important;
+    }
+    &__text {
+      width: 600px;
+      height: 300px;
+      padding-left: 400px;
+    }
+  }
+  .Booking {
+    height: auto;
+    padding-top: 40px;
+    padding-bottom: 70px;
+    &__calendar {
+      height: 500px;
+    }
+  }
+  .otherRoom {
+    height: auto;
+    padding: 100px;
+    padding-left: 150px;
+    padding-right: 150px;
+    &__title {
+      font-size: 5em;
+    }
+    &__room {
+      width: 500px;
+      height: 500px;
+
+      &--flex {
+        flex-wrap: nowrap;
+        width: 400px;
+      }
+      &--Bunker {
+        width: 500px;
+        height: 500px;
+      }
+      &--BackTTFuture {
+        width: 500px;
+        height: 500px;
+      }
+    }
+    &__padding {
+      padding-top: 260px;
+      font-size: 2em;
+      height: 200px;
+      &--grid {
+        grid-template-columns: repeat(5, 40px);
       }
     }
   }

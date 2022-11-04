@@ -57336,7 +57336,7 @@ h1 {
   color: #717171;
 }
 
-@media screen and (min-width: 600px) and (max-width: 1599px) {
+@media screen and (min-width: 600px) {
   .mainSingleRoom {
     padding: 0%;
   }
@@ -57405,6 +57405,66 @@ h1 {
     width: 220px;
     height: 220px;
     display: block;
+  }
+}
+@media (min-width: 1600px) and (max-width: 1920px) {
+  .EscapePresentation {
+    background-size: cover;
+    height: 800px;
+  }
+  .EscapePresentation__title {
+    margin-left: 100px;
+    padding-top: 500px;
+    font-size: 5em;
+  }
+  .EscapeDetails__grid {
+    grid-template-columns: repeat(3, 1fr) !important;
+  }
+  .EscapeDetails__text {
+    width: 600px;
+    height: 300px;
+    padding-left: 400px;
+  }
+  .Booking {
+    height: auto;
+    padding-top: 40px;
+    padding-bottom: 70px;
+  }
+  .Booking__calendar {
+    height: 500px;
+  }
+  .otherRoom {
+    height: auto;
+    padding: 100px;
+    padding-left: 150px;
+    padding-right: 150px;
+  }
+  .otherRoom__title {
+    font-size: 5em;
+  }
+  .otherRoom__room {
+    width: 500px;
+    height: 500px;
+  }
+  .otherRoom__room--flex {
+    flex-wrap: nowrap;
+    width: 400px;
+  }
+  .otherRoom__room--Bunker {
+    width: 500px;
+    height: 500px;
+  }
+  .otherRoom__room--BackTTFuture {
+    width: 500px;
+    height: 500px;
+  }
+  .otherRoom__padding {
+    padding-top: 260px;
+    font-size: 2em;
+    height: 200px;
+  }
+  .otherRoom__padding--grid {
+    grid-template-columns: repeat(5, 40px);
   }
 }
 footer {
