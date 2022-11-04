@@ -490,6 +490,15 @@
       }
     }
   }
+  .photo {
+    &__img {
+      width: 356px;
+      height: 356px;
+    }
+    &__button {
+      margin-top: 60px;
+    }
+  }
   .h1modifier {
     font-size: 1.4em;
   }
@@ -498,5 +507,80 @@
   }
   .display {
     display: block;
+  }
+  .emailForm {
+    &__responsive {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: 1fr;
+      grid-column-gap: 0px;
+      grid-row-gap: 0px;
+    }
+    &__maps {
+      height: 632px;
+    }
+    &__h1 {
+      font-size: 26px;
+    }
+  }
+}
+@media screen and (min-width: 1600px) and (max-width: 1920px) {
+  .HomepageView {
+    height: 1100px;
+    &__flex {
+      padding-right: 400px;
+      &--h1 {
+        width: 647px;
+        font-size: 8em;
+        margin-left: 231px;
+      }
+      &--h2 {
+        font-size: 1.8em;
+        margin-right: 527px;
+      }
+    }
+  }
+  .featuredRoom {
+    padding-top: 70px;
+    padding-left: 400px;
+    padding-right: 400px;
+    padding-bottom: 40px;
+    &__border {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: 1fr;
+      grid-column-gap: 0px;
+      grid-row-gap: 0px;
+    }
+  }
+  .h1modifier {
+    margin-top: 120px;
+    margin-bottom: 170px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 5em;
+    width: 700px;
+  }
+  .Explanation {
+    &__flexResponsive {
+      display: flex;
+      flex-direction: row;
+    }
+    &__p {
+      width: 248px;
+    }
+  }
+  .Explanation {
+    padding-top: 70px;
+    padding-left: 200px;
+    padding-right: 200px;
+    padding-bottom: 40px;
+    &__logo {
+      margin: 0;
+    }
+  }
+  .h1modifierExplanation {
+    font-size: 2.5em;
+    margin: 0;
   }
 }
