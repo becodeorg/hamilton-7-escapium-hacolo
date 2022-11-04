@@ -222,7 +222,7 @@ li {
   color: #717171;
   font-size: 3rem;
   padding-left: 130px;
-  margin-top: 100px;
+  margin-top: 150px;
 }
 .section-form .form-title-one .form-ul {
   color: #717171;
@@ -242,6 +242,7 @@ li {
 .section-form .form-title-one .form-ul .fa-regular {
   color: #fefefe;
   font-size: 80px;
+  margin-top: 150px;
 }
 .section-form .form-title-one .form-ul .fa-solid {
   color: #fefefe;
