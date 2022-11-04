@@ -66,7 +66,7 @@ li{
 
 
 /**********************************FORM**************/
-
+/*
 .section-form{
   background-color: variable.$darkestBackground;
   height: 100%;
@@ -120,11 +120,11 @@ li{
         }
     }
 }
-
+*/
 
 
 /*2 EME DIV */
-
+/*
 .form-contact {
   padding: 20px;
 
@@ -216,7 +216,7 @@ a.mailto:active {
 
 
 }
-}/*fermeture de section form*/
+}
 
 
 
@@ -234,6 +234,63 @@ a.mailto:active {
 
 */
 
+.formcontainer {
+
+  .comment-form {
+
+
+
+    .formrow {
+      display: flex;
+      flex-wrap: wrap;
+
+      .divinput {
+        flex: 0 0 50%;
+        max-width: 50%;
+        gap: 1rem;
+
+        .formgroup {
+
+          input,
+          textarea {
+            display: block;
+            width: 100%;
+            height: 3.2rem;
+            padding: .8rem 0;
+            font-size: 1rem;
+            line-height: 1.5;
+            color: variables.$whiteBackground;
+            background-color: transparent;
+            background-clip: padding-box;
+            border: none;
+            border-bottom: 2px solid grey;
+            border-radius: 0;
+          }
+        }
+      }
+    }
+  }
+
+  .form__group-textarea {
+    margin-bottom: 3rem;
+    height: 20rem;
+
+    textarea {
+      display: block;
+      width: 100%;
+      height: auto;
+      padding: .8rem 0;
+      font-size: 1rem;
+      line-height: 1.5;
+      color: variables.$whiteBackground;
+      background-color: transparent;
+      background-clip: padding-box;
+      border: none;
+      border-bottom: 2px solid grey;
+      border-radius: 0;
+    }
+  }
+}
 
 
 /*************************IMAGE SATELLITE ***************/
