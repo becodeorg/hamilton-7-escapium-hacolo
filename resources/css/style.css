@@ -57024,7 +57024,7 @@ video section q:after table {
     margin-left: auto;
     margin-right: auto;
     font-size: 5em;
-    width: 770px;
+    width: 1300px;
   }
   .Explanation__flexResponsive {
     display: flex;
@@ -57111,6 +57111,28 @@ video section q:after table {
     background-position-x: 100%;
     background-position-y: 51%;
     margin-left: 0rem;
+  }
+  .aiming__flex {
+    padding-left: 200px;
+    font-size: 2em;
+    height: 700px;
+  }
+  .photo {
+    padding-top: 70px;
+    padding-left: 200px;
+    padding-right: 200px;
+    padding-bottom: 40px;
+  }
+  .photo__img {
+    width: 373px;
+    height: 373px;
+  }
+  .photo__grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
   }
 }
 .mainSingleRoom {
