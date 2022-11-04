@@ -1,0 +1,314 @@
+@forward "../base/_reset.scss";
+@forward "../pages/_contact.scss";
+@use "../utilities/_variables.scss" as variable;
+
+
+.header:after {
+  content: "";
+  background-image: url(../images/slide-1.jpg);
+  filter: brightness(50%);
+  top: -30px;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+header {
+  padding-top: 7rem;
+  text-align: center;
+  height: 23rem;
+  background-position: 50% 50%;
+  position: relative;
+  z-index: 1;
+}
+
+.header-contact {
+  color: variable.$whiteBackground;
+  width: 12rem;
+  height: 6rem;
+  text-align: center;
+  font-weight: 700;
+  font-size: 3rem;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-evenly;
+  align-items: center;
+  align-content: stretch;
+}
+.header-li {
+  word-spacing: 1rem;
+}
+
+#header-point {
+  color: variable.$red;
+  font-weight: 900;
+  font-size: 5rem;
+  text-align: center;
+}
+
+ul{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-evenly;
+  align-items: center;
+  align-content: space-between;
+}
+li{
+  color: variable.$whiteBackground;
+}
+
+
+/**********************************FORM**************/
+
+.section-form{
+  background-color: variable.$darkestBackground;
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+
+  .form-title-one {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    margin-left: 90px;
+
+    .form-title-h2 {
+      color: variable.$whiteBackground;
+      font-weight: 800;
+      font-size: 90px;
+      padding-left: 250px;
+      padding-top: 70px;
+    }
+    p {
+      color: variable.$globalFontColor;
+      font-size: 3rem;
+      padding-left: 130px;
+      margin-top: 150px;
+    }
+
+    .form-ul {
+      color: variable.$globalFontColor;
+      font-size: 3rem;
+      display: flex;
+      flex-direction: column;
+      flex-wrap: nowrap;
+      align-items: flex-start;
+      padding-left: 130px;
+      margin-top: 150px;
+
+      li {
+        color: variable.$globalFontColor;
+        margin-bottom: 100px;
+        word-spacing: 2rem;
+      }
+
+      .fa-regular {
+        color: variable.$whiteBackground;
+        font-size: 80px;
+        margin-top: 150px;
+      }
+
+      .fa-solid {
+        color: variable.$whiteBackground;
+        font-size: 80px;
+      }
+    }
+  }
+
+
+
+  /*2 EME DIV */
+
+  .form-contact {
+    padding: 20px;
+
+    .form-title-h3 {
+      color: variable.$whiteBackground;
+      font-weight: 800;
+      font-size: 90px;
+      padding-top: 50px;
+    }
+    .container-formualire {
+      margin-top: 200px;
+    }
+
+    .items-name-email{
+      display: flex;
+      flex-direction: row;
+      margin-top: 200px;
+    }
+
+    #f-name{
+      background-color: transparent;
+      border: none;
+    }
+
+    #f-email {
+      background-color: transparent;
+      border: none;
+    }
+
+    .message{
+      margin-top: 200px;
+    }
+    #f-texte {
+      background-color: transparent;
+      border: none;
+      margin-top: 200px;
+    }
+
+
+
+    label {
+      color: variable.$navFontColor;
+      font-size: 50px;
+    }
+
+
+
+    #hr {
+      width: 350px;
+      margin-top: 50px;
+    }
+    .hr-message{
+      margin-top: 30px;
+      margin-left: 10px;
+    }
+
+    #form-button {
+      color: variable.$whiteBackground;
+      background-color: variable.$red;
+      border: none;
+      border-radius: 28px;
+      padding: 25px 650px;
+      text-align: center;
+      font-size: 30px;
+      margin: 4px 2px;
+      opacity: 0.6;
+      transition: 0.3s;
+      display: inline-block;
+      text-decoration: none;
+      cursor: pointer;
+      margin-top: 10rem;
+
+    }
+    #form-button :hover {
+      opacity: 1;
+      background-color: variable.$red;
+    }
+
+    .form-mailto{
+      color: variable.$whiteBackground;
+      text-decoration: none;
+    }
+
+
+
+    a.mailto:hover,
+    a.mailto:active {
+      color: variable.$red;
+    }
+
+
+
+  }
+}/*fermeture de section form*/
+
+
+
+/*
+@media only screen and (max-width: 524px) {
+  .container {
+    grid-template-columns: 1fr;
+  }
+  .form-title-get{
+    grid-row: 1/1;
+  }
+.form-title-contact{
+  grid-row: 1/1;
+}
+*/
+
+
+
+/*************************IMAGE SATELLITE ***************/
+.img-satellite{
+  height:30rem;
+  background-color: variable.$darkBackground;
+  position: relative;
+}
+.key{
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+}
+
+/***************************ADRESSE*********************/
+a.mailto:hover,a.mailto:active{
+  color: variable.$red;
+}
+
+
+
+/*************************IMAGE EXIT ***************/
+.container-exit {
+  background-image: url(../images/room-7.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 500px;
+  //filter: brightness(50%);
+  //position: relative;
+  border: 2px solid black;
+  font-size: 40px;
+  background-image: url(../images/room-7.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 500px;
+  border: 2px solid black;
+  font-size: 40px;
+  display: flex;
+  align-items: center;
+  //display: grid;
+
+}
+
+.items-address:nth-last-child(1){order: 0;
+  flex: 0 1 auto;
+  align-self: auto;
+}
+.items-useful:nth-last-child(2) {order: 0;
+  flex: 0 1 auto;
+  align-self: auto;
+}
+.items-working:nth-last-child(3) {order: 0;
+  flex: 0 1 auto;
+  align-self: auto;
+}
+.items-social:nth-last-child(4) {order: 0;
+  flex: 0 1 auto;
+  align-self: auto;
+}
+
+
+#title-h4{
+  color: variable.$whiteBackground;
+  font-weight: 600;
+  //opacity: 0.5;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: space-around;
+  align-items: center;
+}

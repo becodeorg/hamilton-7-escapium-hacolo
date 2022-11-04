@@ -1,11 +1,6 @@
 @use "../utilities/variables" as variable;
 footer {
-  background: linear-gradient(
-                  0deg,
-                  rgba(27, 27, 27, 0.95) 10%,
-                  rgba(27, 27, 27, 0.95) 100%
-  ),
-  url("../images/room-7.jpg");
+  background: linear-gradient(0deg, rgba(27, 27, 27, 0.95) 10%, rgba(27, 27, 27, 0.95) 100%), url("../images/room-7.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   color: variable.$globalFontColor;

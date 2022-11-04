@@ -1,5 +1,6 @@
 @forward "../components/_buttons.scss";
 @forward "../layout/_header.scss";
+@forward "../layout/_footer.scss";
 @use "../utilities/_variables.scss" as variables;
 
 main {
@@ -322,6 +323,44 @@ color: lightgrey;
     }
   }
 }
+.post__bottom, .comment__footer {
+  background-image: none!important;
+}
 .comment__post--date {
   font-size: 0.8rem;
+}
+.button__submit {
+  @extend #nav__button;
+  background-color: transparent;
+}
+
+@media (min-width: 767px) and (max-width: 1280px){
+.div__post--header {
+  margin-left: 0!important;
+}
+  .post__comment--form, .blog-comments {
+    margin-left: 2rem!important;
+  }
+}
+.post__bottom--tags {
+  display: flex;
+}
+.blog-comments, .post__comment--form {
+  margin-bottom: 5rem;
+  width: 90%;
+  margin-left: 1rem;
+}
+
+.post-author__link {
+  border: 1px solid lightgrey;
+  padding: 0.7rem;
+  border-radius: 50%;
+
+  i {
+    color: white;
+    font-size: 0.8rem;
+  }
+}
+@media only screen and (max-width: 413px){
+
 }

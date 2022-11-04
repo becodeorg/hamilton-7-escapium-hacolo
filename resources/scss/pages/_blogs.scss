@@ -1,7 +1,56 @@
 @forward "../components/_buttons.scss";
 @forward "../layout/_header.scss";
 @use "../utilities/variables" as variables;
+@mixin btn-border-drawing($color: #ccc, $hover: black, $width: 2px, $vertical: top, $horizontal: left, $duration: 0.25s) {
+  color: $color;
+  transition: color $duration calc($duration/3);
+  position: relative;
 
+  &::before,
+  &::after {
+    border: 0 solid transparent;
+    box-sizing: border-box;
+    content: '';
+    pointer-events: none;
+    position: absolute;
+    width: 0;
+    height: 0;
+    z-index: 1;
+
+    #{$vertical}: 0;
+    #{$horizontal}: 0;
+  }
+
+  &::before {
+    $h-side: if($horizontal == 'left', 'right', 'left');
+
+    border-#{$vertical}-width: $width;
+    border-#{$h-side}-width: $width;
+  }
+
+  &::after {
+    $v-side: if($vertical == 'top', 'bottom', 'top');
+
+    border-#{$v-side}-width: $width;
+    border-#{$horizontal}-width: $width;
+  }
+
+  &:hover {
+    color: $hover;
+
+    &::before,
+    &::after {
+      border-color: $hover;
+      transition: border-color 0s, width $duration, height $duration;
+      width: 100%;
+      height: 100%;
+    }
+
+    &::before { transition-delay: 0s, 0s, $duration; }
+
+    &::after { transition-delay: 0s, $duration, 0s; }
+  }
+}
 
 main {
 
@@ -316,21 +365,25 @@ main {
     }
   }
 }
+.draw-border {
+  @include btn-border-drawing(variables.$red, variables.$red, 2px, top, right);
 
+}
 @media only screen and (max-width: 413px) {
 
 main {
 
   .page__container {
-    margin: 0;
+    margin: 0!important;
 
     .main__divider {
       display: flex;
       flex-direction: column;
       max-width: 100%;
+      margin: 0!important;
 
       .main__section {
-        max-width: 100%;
+        max-width: 100%!important;
         display: flex;
         flex-wrap: wrap;
         gap: 6rem;
@@ -384,10 +437,9 @@ main {
           display: flex;
           flex-direction: row;
           flex-wrap: wrap;
-          width: 412px;
+          width: 22rem !important;
           a {
             font-size: 0.7rem;
-            margin: 0;
             padding: 0.5rem 1rem 0.5rem 1rem;
 
         }
@@ -407,7 +459,7 @@ main {
            gap: 0px;
            place-items: center;
            gap: 0.5rem;
-           margin-left: -2.5rem;
+           margin-left: 12rem;
 
 
            li {
@@ -420,56 +472,7 @@ main {
                margin: 0;
              }
            }
-           @mixin btn-border-drawing($color: #ccc, $hover: black, $width: 2px, $vertical: top, $horizontal: left, $duration: 0.25s) {
-             color: $color;
-             transition: color $duration calc($duration/3);
-             position: relative;
 
-             &::before,
-             &::after {
-               border: 0 solid transparent;
-               box-sizing: border-box;
-               content: '';
-               pointer-events: none;
-               position: absolute;
-               width: 0;
-               height: 0;
-               z-index: 1;
-
-               #{$vertical}: 0;
-               #{$horizontal}: 0;
-             }
-
-             &::before {
-               $h-side: if($horizontal == 'left', 'right', 'left');
-
-               border-#{$vertical}-width: $width;
-               border-#{$h-side}-width: $width;
-             }
-
-             &::after {
-               $v-side: if($vertical == 'top', 'bottom', 'top');
-
-               border-#{$v-side}-width: $width;
-               border-#{$horizontal}-width: $width;
-             }
-
-             &:hover {
-               color: $hover;
-
-               &::before,
-               &::after {
-                 border-color: $hover;
-                 transition: border-color 0s, width $duration, height $duration;
-                 width: 100%;
-                 height: 100%;
-               }
-
-               &::before { transition-delay: 0s, 0s, $duration; }
-
-               &::after { transition-delay: 0s, $duration, 0s; }
-             }
-           }
 
            .draw-border {
              @include btn-border-drawing(variables.$red, variables.$red, 2px, top, right);
@@ -486,7 +489,77 @@ main {
 }
 
 }
-@media (min-width: 768px) and (max-width: 1280px) {
+@media (min-width: 767px) and (max-width: 1280px) {
+  main {
 
 
+    .page__container {
+      margin: 0rem !important;
+
+      .main__divider {
+
+        section {
+          max-width: 60%!important;
+          display: flex;
+          flex-direction: column;
+
+          article {
+
+
+
+            figure {
+              position: relative;
+              margin: 0!important;
+              z-index: -1;
+            }
+        }
+
+        aside {
+          max-width: 30%;
+          padding-left: 2rem;
+
+          .aside__tags {
+
+            div {
+              display: flex;
+              flex-direction: row;
+              flex-wrap: wrap ;
+              a {
+                font-size: 0.7rem !important;
+                padding: 0.5rem 1rem 0.5rem 1rem !important;
+
+              }
+            }
+          }
+      }
+        }
+      }
+    }}
+  .aside__photos {
+
+    .photos__container{
+
+      ul {
+        grid-template-columns: repeat(2, auto)!important;
+        grid-template-rows: repeat(3, auto);
+        column-gap: 10px!important;
+        .draw-border {
+          width: 7.5rem!important;
+          margin: 0;
+
+          img {
+            width: 7.5rem!important;
+            margin: 0;
+          }
+        }
+
+
+        .draw-border {
+          @include btn-border-drawing(variables.$red, variables.$red, 2px, top, right);
+
+        }
+      }
+    }
+  }
 }
+
