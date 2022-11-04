@@ -281,12 +281,16 @@ li {
   margin-top: 200px;
 }
 .section-form .form-contact label {
-  color: #fefefe;
+  color: #777;
   font-size: 50px;
 }
 .section-form .form-contact #hr {
   width: 350px;
   margin-top: 50px;
+}
+.section-form .form-contact .hr-message {
+  margin-top: 30px;
+  margin-left: 10px;
 }
 .section-form .form-contact #form-button {
   color: #fefefe;
@@ -314,9 +318,6 @@ li {
 }
 .section-form .form-contact a.mailto:hover,
 .section-form .form-contact a.mailto:active {
-  color: #F60B0E;
-}
-.section-form .form-contact a.form-mailto:hover, .section-form .form-contact a.form-mailto:active {
   color: #F60B0E;
 }
 
@@ -406,6 +407,10 @@ a.mailto:hover, a.mailto:active {
   justify-content: center;
   align-content: space-around;
   align-items: center;
+}
+
+.textarea {
+  color: red;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -162,15 +162,21 @@ li{
           border: none;
           margin-top: 200px;
         }
+    
+
 
     label {
-      color: variable.$whiteBackground;
+      color: variable.$navFontColor;
       font-size: 50px;
     }
+
     #hr {
       width: 350px;
-      //margin-right:80px;
       margin-top: 50px;
+    }
+    .hr-message{
+      margin-top: 30px;
+      margin-left: 10px;
     }
 
 #form-button {
@@ -200,14 +206,15 @@ li{
   text-decoration: none;
 }
 
+
+
 a.mailto:hover,
 a.mailto:active {
   color: variable.$red;
 }
 
-a.form-mailto:hover,a.form-mailto:active {
-  color: variable.$red;
-}
+
+
 }
 }/*fermeture de section form*/
 
@@ -247,6 +254,7 @@ a.form-mailto:hover,a.form-mailto:active {
 a.mailto:hover,a.mailto:active{
       color: variable.$red;
 }
+
 
 
 /*************************IMAGE EXIT ***************/
@@ -301,4 +309,11 @@ a.mailto:hover,a.mailto:active{
   justify-content: center;
   align-content: space-around;
   align-items: center;
+}
+
+
+
+
+.textarea{
+  color: red;
 }
