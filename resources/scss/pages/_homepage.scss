@@ -409,7 +409,7 @@
     height: 500px;
   }
 }
-@media screen and (min-width: 768px) and (max-width: 1599px) {
+@media screen and (min-width: 768px) {
   .HomepageView {
     height: 468px;
     &__flex {
@@ -559,7 +559,7 @@
     margin-left: auto;
     margin-right: auto;
     font-size: 5em;
-    width: 700px;
+    width: 770px;
   }
   .Explanation {
     &__flexResponsive {
@@ -572,15 +572,86 @@
   }
   .Explanation {
     padding-top: 70px;
-    padding-left: 200px;
-    padding-right: 200px;
+    padding-left: 50px;
+    padding-right: 50px;
     padding-bottom: 40px;
+    &__flexResponsive--center {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      width: 600px;
+    }
+    &__p {
+      margin-left: auto;
+      margin-right: auto;
+    }
     &__logo {
-      margin: 0;
+      width: 150px;
+      height: 150px;
+      font-size: 4em;
+      &::after {
+        height: 230px;
+      }
     }
   }
   .h1modifierExplanation {
     font-size: 2.5em;
     margin: 0;
+    margin-top: 80px;
+  }
+  .transverse {
+    width: 95px;
+    height: 95px;
+  }
+  .testimonial {
+    padding-top: 70px;
+    padding-left: 200px;
+    padding-right: 200px;
+    padding-bottom: 40px;
+    &__quote {
+      width: 500px;
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 30px;
+    }
+  }
+  .blogspots {
+    &__profile {
+      &--flex {
+        padding-top: 240px;
+        padding-left: 20px;
+      }
+    }
+    &__blogTwo {
+      height: 375px;
+    }
+    &__blogThree {
+      height: 375px;
+    }
+    &__blogOne {
+      height: 375px;
+    }
+    &__flexResponsive {
+      justify-content: center;
+      &--width {
+        margin-left: 40px;
+        width: 500px;
+      }
+    }
+  }
+  .aiming {
+    background: linear-gradient(90deg, #222 60%, rgba(27, 27, 27, 0.1) 100%),
+      url("../images/room-7.jpg");
+    background-position-x: 0%, 0%;
+    background-position-y: 0%, 0%;
+    background-repeat: repeat, repeat;
+    background-size: auto, auto;
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 800px;
+    font-size: 1.6em;
+    background-position-x: 100%;
+    background-position-y: 51%;
+    margin-left: 0rem;
   }
 }
