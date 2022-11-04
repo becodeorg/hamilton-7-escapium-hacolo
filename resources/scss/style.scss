@@ -1,4 +1,7 @@
 @forward "base/_reset.scss";
+@forward "./pages/homepage";
+@forward "./pages/single_room";
+@forward "./pages/footer";
 @forward "components/_buttons.scss";
 @forward "pages/_rooms.scss";
 @forward "pages/_blogs.scss";
@@ -18,3 +21,4 @@ p {
 body {
   background-color: variables.$darkestBackground;
 }
+
