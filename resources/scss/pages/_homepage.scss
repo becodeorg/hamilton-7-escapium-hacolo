@@ -198,6 +198,9 @@
   position: absolute;
   z-index: 1;
 }
+.display {
+  display: none;
+}
 .testimonial {
   background-color: variable.$whiteBackground;
   padding-top: 20px;
@@ -365,4 +368,135 @@
   margin-right: auto;
   width: 142px;
   margin-top: 55px;
+}
+.emailForm {
+  background-color: variable.$darkestBackground;
+  padding-top: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 35px;
+  line-height: 20px;
+  &__button {
+    padding: 5px;
+    margin-top: 30px;
+    background-color: variable.$darkestBackground;
+    border: solid 1.5px variable.$globalFontColor;
+    border-radius: 30px;
+    color: white;
+    height: 45px;
+    width: 169px;
+  }
+  &__text {
+    background-color: variable.$darkestBackground;
+    color: variable.$globalFontColor;
+    border: none;
+    border-bottom: solid 1.5px variable.$globalFontColor;
+    width: 100%;
+    height: 40px;
+    margin-top: 40px;
+    &--message {
+      padding-bottom: 120px;
+    }
+  }
+  &__h1 {
+    margin-top: 50px;
+  }
+  &__maps {
+    background-image: url("../images/37-lunar-landscape.png");
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 500px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1599px) {
+  .HomepageView {
+    height: 468px;
+    &__flex {
+      &--h1 {
+        width: 261px;
+        font-size: 3em;
+      }
+    }
+  }
+  .featuredRoom {
+    padding-left: 65px;
+    padding-right: 65px;
+    &__hr {
+      width: 4%;
+    }
+    &__Imporium {
+      height: 400px;
+    }
+    &__Cure {
+      height: 400px;
+    }
+    &__Burlesque {
+      height: 400px;
+    }
+  }
+  .Explanation {
+    &__flexResponsive {
+      display: flex;
+      flex-direction: row;
+    }
+    &__p {
+      width: 248px;
+    }
+  }
+  .testimonial {
+    &__flexResponsive {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: 1fr;
+      grid-column-gap: 0px;
+      grid-row-gap: 0px;
+    }
+    &__arrow {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      font-size: 2em;
+      margin-left: auto;
+      margin-right: auto;
+      width: 250px;
+      margin-bottom: 40px;
+      margin-top: 70px;
+    }
+    &__transverse {
+      transform: translateX(-0%) rotate(-45deg) scaleY(1);
+      width: 120px;
+      height: 1px;
+      background-color: variable.$globalFontColor;
+      margin-left: -2px;
+
+      margin-top: 18px;
+    }
+  }
+  .aiming {
+    height: 551px;
+    &__flex {
+      padding-left: 50px;
+    }
+  }
+  .blogspots {
+    &__flexResponsive {
+      justify-content: space-between;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      &--width {
+        width: 300px;
+      }
+    }
+  }
+  .h1modifier {
+    font-size: 1.4em;
+  }
+  .h1modifierExplanation {
+    font-size: 1.2em;
+  }
+  .display {
+    display: block;
+  }
 }
