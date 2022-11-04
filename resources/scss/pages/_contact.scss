@@ -1,5 +1,6 @@
 @forward "../base/_reset.scss";
-@forward "../pages/_contact.scss";
+@forward "../layout/_header.scss";
+@forward "../layout/_footer.scss";
 @use "../utilities/_variables.scss" as variable;
 
 
@@ -52,17 +53,18 @@ header {
   text-align: center;
 }
 
-ul{
+.form_ul {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
   justify-content: space-evenly;
   align-items: center;
   align-content: space-between;
+  li{
+    color: variable.$whiteBackground;
+  }
 }
-li{
-  color: variable.$whiteBackground;
-}
+
 
 
 /**********************************FORM**************/

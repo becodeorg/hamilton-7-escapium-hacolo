@@ -190,23 +190,6 @@
         display: block;
         position: relative;
       }
-      a:before {
-        content: '';
-        position: absolute;
-        margin-left: 50%;
-        height: 50px;
-        top: -100%;
-        transform: translateX(-50%) rotate(-135deg) scaleY(0);
-        transition: all 0.5s ease-in-out;
-        z-index: -1;
-      }
-
-      a:hover:before {
-        background: $red;
-        width: 3px;
-        transform: translateX(-50%) rotate(-135deg) scaleY(1);
-        margin-top: -5px;
-      }
       a:hover {
         color: $whiteBackground;
       }
@@ -293,6 +276,33 @@
       &__li {
         border: none;
         text-transform: lowercase;
+
+        a {
+          color: $navFontColor;
+          text-decoration: none;
+          display: block;
+          position: relative;
+        }
+        a:before {
+          content: '';
+          position: absolute;
+          margin-left: 50%;
+          height: 50px;
+          top: -100%;
+          transform: translateX(-50%) rotate(-135deg) scaleY(0);
+          transition: all 0.5s ease-in-out;
+          z-index: -1;
+        }
+
+        a:hover:before {
+          background: $red;
+          width: 3px;
+          transform: translateX(-50%) rotate(-135deg) scaleY(1);
+          margin-top: -5px;
+        }
+        a:hover {
+          color: $whiteBackground;
+        }
       }
 
     }

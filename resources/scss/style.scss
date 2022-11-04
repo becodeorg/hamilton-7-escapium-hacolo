@@ -1,10 +1,11 @@
 @forward "base/_reset.scss";
 @forward "components/_buttons.scss";
+@forward "pages/_homepage.scss";
 @forward "pages/_rooms.scss";
 @forward "pages/_blogs.scss";
 @forward "pages/_singleblog.scss";
 @forward "pages/_contact.scss";
-@forward "pages/_single_room.scss";
+@forward "pages/_singleroom.scss";
 
 @use "utilities/_variables.scss" as variables;
 

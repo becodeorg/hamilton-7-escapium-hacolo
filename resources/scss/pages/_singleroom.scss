@@ -1,0 +1,349 @@
+@use "../utilities/variables" as variable;
+
+.mainSingleRoom {
+  color: variable.$globalFontColor;
+  padding: 0%;
+}
+.EscapePresentation {
+  background: linear-gradient(
+                  0deg,
+                  rgba(27, 27, 27, 1) 10%,
+                  rgba(27, 27, 27, 0) 100%
+  ),
+  url("../images/room-7.jpg");
+  background-repeat: no-repeat;
+  background-size: contain;
+
+  height: 300px;
+
+  &__title {
+    margin-left: 10px;
+    padding-top: 215px;
+    color: white;
+  }
+}
+h1 {
+  font-size: 32px;
+  font-family: variable.$MontSerraH1;
+}
+.EscapeDetails {
+  background-color: variable.$darkestBackground;
+  font-family: variable.$Hind;
+  padding-left: 15px;
+  padding-right: 15px;
+  height: 700px;
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    &--flex {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-around;
+      height: 70px;
+    }
+  }
+  &__text {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 30px;
+    height: 325px;
+    font-size: 16px;
+    margin-bottom: 25px;
+    line-height: 21px;
+  }
+  &__contact {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    height: 37px;
+    border-bottom: solid variable.$darkBackground 2px;
+    color: variable.$whiteBackground;
+  }
+  &__button {
+    padding: 1rem 2rem 1rem 2rem;
+    border-radius: 3rem;
+    text-decoration: none;
+    color: variable.$whiteBackground;
+    font-weight: 700;
+    background-color: variable.$red;
+    width: 120px;
+    margin-top: 20px;
+  }
+}
+
+.Space {
+  display: flex;
+  justify-content: space-around;
+  width: 100px;
+}
+.smallerSpace {
+  width: 49px;
+}
+.WhiteColor {
+  color: variable.$whiteBackground;
+}
+.RedColor {
+  color: variable.$red;
+}
+.borderRight {
+  border-right: solid variable.$darkBackground 2px;
+}
+.Margincontact {
+  margin-right: 15px;
+}
+.hrSingle {
+  width: 10%;
+  height: 3px;
+  margin: auto;
+  background-color: variable.$globalFontColor;
+  border-radius: 4%;
+}
+.Booking {
+  background-color: variable.$darkBackground;
+  height: 560px;
+  padding-top: 40px;
+  &__title {
+    margin-top: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    color: white;
+    font-family: variable.$MontSerraH1;
+    font-size: 21px;
+  }
+  &__calendar {
+    width: 382px;
+    height: 382px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 40px;
+    box-shadow: 2px 9px 20px 5px rgba(0, 0, 0, 0.75);
+    border: solid variable.$globalFontColor 1px;
+  }
+}
+.otherRoom {
+  background-color: variable.$darkestBackground;
+  height: 500px;
+  &__title {
+    margin-left: 10px;
+    padding-top: 35px;
+    color: white;
+    margin-bottom: 30px;
+  }
+  &__padding {
+    padding-top: 220px;
+    height: 108px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-left: 25px;
+    &--grid {
+      display: grid;
+      grid-template-columns: repeat(5, 20px);
+      grid-template-rows: 1fr;
+      grid-column-gap: 0px;
+      grid-row-gap: 0px;
+    }
+  }
+  &__room {
+    width: 382px;
+    height: 350px;
+    margin-left: auto;
+    margin-right: auto;
+    background: linear-gradient(
+                    0deg,
+                    rgba(0, 0, 0, 1) 5%,
+                    rgba(27, 27, 27, 0) 100%
+    ),
+    url("../images/room-8.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow: 2px 9px 20px 5px rgba(0, 0, 0, 0.75);
+    &--flex {
+      color: white;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      width: 190px;
+      font-size: smaller;
+    }
+    &--Bunker {
+      display: none;
+      width: 382px;
+      height: 350px;
+      margin-left: auto;
+      margin-right: auto;
+      background: linear-gradient(
+                      0deg,
+                      rgba(0, 0, 0, 1) 5%,
+                      rgba(27, 27, 27, 0) 100%
+      ),
+      url("../images/room-7.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      box-shadow: 2px 9px 20px 5px rgba(0, 0, 0, 0.75);
+    }
+    &--BackTTFuture {
+      display: none;
+      width: 382px;
+      height: 350px;
+      margin-left: auto;
+      margin-right: auto;
+      background: linear-gradient(
+                      0deg,
+                      rgba(0, 0, 0, 1) 5%,
+                      rgba(27, 27, 27, 0) 100%
+      ),
+      url("../images/room-9.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      box-shadow: 2px 9px 20px 5px rgba(0, 0, 0, 0.75);
+    }
+  }
+}
+.grayColor {
+  color: variable.$globalFontColor;
+}
+@media screen and (min-width: 600px) {
+  .mainSingleRoom {
+    padding: 0%;
+  }
+
+  .EscapePresentation {
+    height: 550px;
+    &__title {
+      margin-left: 51px;
+      padding-top: 326px;
+    }
+  }
+  h1 {
+    font-size: 4em;
+  }
+  .responsiveWidth {
+    width: 220px;
+  }
+  .EscapeDetails {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 482px;
+    padding-left: 50px;
+    &__grid {
+      grid-template-columns: repeat(3, 150px);
+    }
+    &__text {
+      width: 425px;
+      height: 290px;
+    }
+    &__button {
+      margin-top: 35px;
+      width: 126px;
+    }
+  }
+  .otherRoom {
+    &__padding {
+      padding-top: 34px;
+      height: 156px;
+    }
+    &__title {
+      font-size: 2em;
+      padding-left: 20px;
+    }
+    &__responsive {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: 1fr;
+      grid-column-gap: 0px;
+      grid-row-gap: 0px;
+    }
+    &__room {
+      width: 220px;
+      height: 220px;
+      &--flex {
+        width: 100px;
+        font-size: smaller;
+        height: 60px;
+        flex-wrap: wrap;
+      }
+      &--Bunker {
+        width: 220px;
+        height: 220px;
+        display: block;
+      }
+      &--BackTTFuture {
+        width: 220px;
+        height: 220px;
+        display: block;
+      }
+    }
+  }
+}
+@media (min-width: 1600px) and (max-width: 1920px) {
+  .EscapePresentation {
+    background-size: cover;
+    height: 800px;
+    &__title {
+      margin-left: 100px;
+      padding-top: 500px;
+      font-size: 5em;
+    }
+  }
+  .EscapeDetails {
+    &__grid {
+      grid-template-columns: repeat(3, 1fr) !important;
+    }
+    &__text {
+      width: 600px;
+      height: 300px;
+      padding-left: 400px;
+    }
+  }
+  .Booking {
+    height: auto;
+    padding-top: 40px;
+    padding-bottom: 70px;
+    &__calendar {
+      height: 500px;
+    }
+  }
+  .otherRoom {
+    height: auto;
+    padding: 100px;
+    padding-left: 150px;
+    padding-right: 150px;
+    &__title {
+      font-size: 5em;
+    }
+    &__room {
+      width: 500px;
+      height: 500px;
+
+      &--flex {
+        flex-wrap: nowrap;
+        width: 400px;
+      }
+      &--Bunker {
+        width: 500px;
+        height: 500px;
+      }
+      &--BackTTFuture {
+        width: 500px;
+        height: 500px;
+      }
+    }
+    &__padding {
+      padding-top: 260px;
+      font-size: 2em;
+      height: 200px;
+      &--grid {
+        grid-template-columns: repeat(5, 40px);
+      }
+    }
+  }
+}

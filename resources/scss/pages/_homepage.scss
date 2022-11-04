@@ -1,0 +1,683 @@
+@use "../utilities/variables" as variable;
+.homepage {
+  color: variable.$globalFontColor;
+  font-family: variable.$Hind;
+}
+.HomepageView {
+  background: linear-gradient(
+      0deg,
+      rgba(27, 27, 27, 1) 10%,
+      rgba(27, 27, 27, 0) 100%
+    ),
+    url("../images/slide-4.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 280px;
+  &__flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+    &--h1 {
+      font-family: variable.$MontSerraH1;
+      color: white;
+      width: 162px;
+      font-size: 1.8em;
+      margin-bottom: 23px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    &--h2 {
+      color: white;
+      font-size: 0.8em;
+    }
+  }
+}
+.featuredRoom {
+  background-color: variable.$darkestBackground;
+  padding-top: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 5px;
+  line-height: 20px;
+
+  &__border {
+    box-shadow: 2px 9px 20px 5px rgba(0, 0, 0, 0.75);
+    margin-bottom: 65px;
+  }
+  &__paddings {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 380px;
+
+    &--grid {
+      display: grid;
+      grid-template-columns: repeat(5, 20px);
+      grid-template-rows: 1fr;
+      grid-column-gap: 0px;
+      grid-row-gap: 0px;
+    }
+    &--flex {
+      color: white;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      width: 190px;
+      font-size: smaller;
+    }
+  }
+  &__hr {
+    width: 9%;
+    height: 4px;
+    margin: auto;
+
+    background-color: variable.$globalFontColor;
+    border-radius: 4%;
+  }
+  &__buttonReadmore {
+    padding: 1rem 2rem 1rem 2rem;
+    border-radius: 3rem;
+    text-decoration: none;
+    color: variable.$whiteBackground;
+    font-weight: 700;
+    background-color: variable.$red;
+    width: 100px;
+    margin-top: 20px;
+    text-align: center;
+  }
+  &__Imporium {
+    height: 250px;
+    background: linear-gradient(
+        0deg,
+        rgba(27, 27, 27, 0.6) 0%,
+        rgba(27, 27, 27, 0.6) 100%
+      ),
+      url("../images/slide-2.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  &__Cure {
+    height: 250px;
+    background: linear-gradient(
+        0deg,
+        rgba(27, 27, 27, 0.6) 0%,
+        rgba(27, 27, 27, 0.6) 100%
+      ),
+      url("../images/room-2.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  &__Burlesque {
+    height: 250px;
+    background: linear-gradient(
+        0deg,
+        rgba(27, 27, 27, 0.6) 0%,
+        rgba(27, 27, 27, 0.6) 100%
+      ),
+      url("../images/room-3.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  &__h1 {
+    color: white;
+    font-size: 1.5em;
+    margin-bottom: 16px;
+  }
+}
+.h1modifier {
+  width: 256px;
+  margin-top: 35px;
+  margin-bottom: 65px;
+  text-align: center;
+  font-size: 1.4em;
+}
+.h1modifierExplanation {
+  width: 256px;
+  margin-top: 35px;
+  margin-bottom: 20px;
+  text-align: center;
+  font-size: 1.4em;
+}
+.RedColor {
+  color: variable.$red;
+}
+.grayColor {
+  color: variable.$globalFontColor;
+}
+.Explanation {
+  background-color: variable.$darkBackground;
+  padding-top: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 5px;
+  text-align: center;
+  &__p {
+    line-height: 20px;
+    margin-bottom: 70px;
+  }
+  &__logo {
+    color: white;
+    height: 85px;
+    width: 85px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    border: solid variable.$globalFontColor 2.5px;
+    font-size: 2em;
+    position: relative;
+    z-index: 3;
+
+    &::after {
+      content: "";
+      position: absolute;
+      margin-left: 50%;
+      height: 113px;
+      width: 1.5px;
+      background-color: variable.$globalFontColor;
+      top: -18%;
+      left: 0%;
+      transform: translateX(-50%) rotate(-150deg) scaleY(1);
+
+      z-index: -1;
+    }
+  }
+}
+.transverse {
+  display: block;
+  width: 32px;
+  height: 32px;
+  padding: 26.5px;
+  background-color: variable.$darkBackground;
+  border-radius: 50%;
+  position: absolute;
+  z-index: 1;
+}
+.display {
+  display: none;
+}
+.testimonial {
+  background-color: variable.$whiteBackground;
+  padding-top: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 35px;
+  line-height: 20px;
+  text-align: center;
+  &__name {
+    color: variable.$darkBackground;
+    font-weight: bolder;
+  }
+
+  &__quote {
+    line-height: 25px;
+    font-size: 1.2em;
+  }
+  &__profil {
+    margin-top: 10px;
+    margin: 10px;
+  }
+}
+.blogspots {
+  background-color: variable.$darkestBackground;
+  padding-top: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 35px;
+  line-height: 20px;
+  &__paragraphe {
+    font-size: 0.8em;
+    margin-bottom: 40px;
+  }
+  &__title {
+    color: white;
+    font-family: variable.$MontSerraH1;
+    margin-bottom: 20px;
+  }
+  &__hr {
+    width: 9%;
+    height: 4px;
+    background-color: variable.$globalFontColor;
+    margin-bottom: 20px;
+    margin-top: 20px;
+  }
+  &__resume {
+    color: variable.$darkBackground;
+    font-size: 0.85em;
+  }
+  &__profile {
+    border: #ebebeb solid 3px;
+    border-radius: 50%;
+    width: 34px;
+    height: 34px;
+    overflow: hidden;
+    margin-left: 20px;
+    margin-right: 10px;
+    &--flex {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      padding-top: 150px;
+    }
+    &--p {
+      color: white;
+      font-size: 0.8em;
+      font-weight: bolder;
+    }
+  }
+  &__redSubtitles {
+    color: variable.$red;
+    text-decoration: underline;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    margin-top: -45px;
+    margin-bottom: 50px;
+  }
+
+  &__blogOne {
+    background: linear-gradient(0deg, #1b1b1b 15%, rgba(27, 27, 27, 0.1) 40%),
+      url("../images/post-img-2.jpg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 278px;
+  }
+  &__blogTwo {
+    background: linear-gradient(0deg, #1b1b1b 15%, rgba(27, 27, 27, 0.2) 40%),
+      url("../images/room-7.jpg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 269px;
+  }
+  &__blogThree {
+    background: linear-gradient(0deg, #1b1b1b 15%, rgba(27, 27, 27, 0.2) 40%),
+      url("../images/room-9.jpg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 278px;
+  }
+}
+.darkolor {
+  color: variable.$darkestBackground;
+  margin-bottom: 50px;
+}
+.aiming {
+  background: linear-gradient(90deg, #222222 30%, rgba(27, 27, 27, 0.1) 60%),
+    url("../images/room-7.jpg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 296px;
+  font-size: 1.6em;
+
+  &__responsivePart {
+    display: none;
+  }
+  &__flex {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 75%;
+    color: white;
+    padding-top: 38px;
+  }
+}
+.logoAiming {
+  color: variable.$red;
+  margin-left: 55px;
+  margin-right: 10px;
+}
+.photo {
+  background-color: variable.$darkestBackground;
+  padding-top: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 35px;
+  line-height: 20px;
+  &__button {
+    border: 1px solid lightgray;
+    padding: 1rem 2rem 1rem 2rem;
+    border-radius: 3rem;
+    text-decoration: none;
+    color: white;
+    font-weight: 700;
+    width: 173px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+  }
+  &__img {
+    width: 182px;
+    height: 182px;
+    margin: 2px;
+  }
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+  }
+}
+.bookingButton {
+  margin-left: auto;
+  margin-right: auto;
+  width: 142px;
+  margin-top: 55px;
+}
+.emailForm {
+  background-color: variable.$darkestBackground;
+  padding-top: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 35px;
+  line-height: 20px;
+  &__button {
+    padding: 5px;
+    margin-top: 30px;
+    background-color: variable.$darkestBackground;
+    border: solid 1.5px variable.$globalFontColor;
+    border-radius: 30px;
+    color: white;
+    height: 45px;
+    width: 169px;
+  }
+  &__text {
+    background-color: variable.$darkestBackground;
+    color: variable.$globalFontColor;
+    border: none;
+    border-bottom: solid 1.5px variable.$globalFontColor;
+    width: 100%;
+    height: 40px;
+    margin-top: 40px;
+    &--message {
+      padding-bottom: 120px;
+    }
+  }
+  &__h1 {
+    margin-top: 50px;
+  }
+  &__maps {
+    background-image: url("../images/37-lunar-landscape.png");
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 500px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .Explanation {
+    width: 90%;
+    padding: 0;
+  }
+  .HomepageView {
+    height: 468px;
+    &__flex {
+      &--h1 {
+        width: 261px;
+        font-size: 3em;
+      }
+    }
+  }
+  .featuredRoom {
+    padding-left: 65px;
+    padding-right: 65px;
+    &__hr {
+      width: 4%;
+    }
+    &__Imporium {
+      height: 400px;
+    }
+    &__Cure {
+      height: 400px;
+    }
+    &__Burlesque {
+      height: 400px;
+    }
+  }
+  .Explanation {
+    &__flexResponsive {
+      display: flex;
+      flex-direction: row;
+    }
+    &__p {
+      width: 248px;
+    }
+  }
+  .testimonial {
+    &__flexResponsive {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: 1fr;
+      grid-column-gap: 0px;
+      grid-row-gap: 0px;
+    }
+    &__arrow {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      font-size: 2em;
+      margin-left: auto;
+      margin-right: auto;
+      width: 250px;
+      margin-bottom: 40px;
+      margin-top: 70px;
+    }
+    &__transverse {
+      transform: translateX(-0%) rotate(-45deg) scaleY(1);
+      width: 120px;
+      height: 1px;
+      background-color: variable.$globalFontColor;
+      margin-left: -2px;
+
+      margin-top: 18px;
+    }
+  }
+  .aiming {
+    height: 551px;
+    &__flex {
+      padding-left: 50px;
+    }
+  }
+  .blogspots {
+    &__flexResponsive {
+      justify-content: space-between;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      &--width {
+        width: 300px;
+      }
+    }
+  }
+  .photo {
+    &__img {
+      width: 356px;
+      height: 356px;
+    }
+    &__button {
+      margin-top: 60px;
+    }
+  }
+  .h1modifier {
+    font-size: 1.4em;
+  }
+  .h1modifierExplanation {
+    font-size: 1.2em;
+  }
+  .display {
+    display: block;
+  }
+  .emailForm {
+    &__responsive {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: 1fr;
+      grid-column-gap: 0px;
+      grid-row-gap: 0px;
+    }
+    &__maps {
+      height: 632px;
+    }
+    &__h1 {
+      font-size: 26px;
+    }
+  }
+}
+@media screen and (min-width: 1600px) and (max-width: 1920px) {
+  .HomepageView {
+    height: 1100px;
+    &__flex {
+      padding-right: 400px;
+      &--h1 {
+        width: 647px;
+        font-size: 8em;
+        margin-left: 231px;
+      }
+      &--h2 {
+        font-size: 1.8em;
+        margin-right: 527px;
+      }
+    }
+  }
+  .featuredRoom {
+    padding-top: 70px;
+    padding-left: 400px;
+    padding-right: 400px;
+    padding-bottom: 40px;
+    &__border {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: 1fr;
+      grid-column-gap: 0px;
+      grid-row-gap: 0px;
+    }
+  }
+  .h1modifier {
+    margin-top: 120px;
+    margin-bottom: 170px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 5em;
+    width: 1300px;
+  }
+  .Explanation {
+    &__flexResponsive {
+      display: flex;
+      flex-direction: row;
+    }
+    &__p {
+      width: 248px;
+    }
+  }
+  .Explanation {
+    padding-top: 70px;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-bottom: 40px;
+    &__flexResponsive--center {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      width: 600px;
+    }
+    &__p {
+      margin-left: auto;
+      margin-right: auto;
+    }
+    &__logo {
+      width: 150px;
+      height: 150px;
+      font-size: 4em;
+      &::after {
+        height: 230px;
+      }
+    }
+  }
+  .h1modifierExplanation {
+    font-size: 2.5em;
+    margin: 0;
+    margin-top: 80px;
+  }
+  .transverse {
+    width: 95px;
+    height: 95px;
+  }
+  .testimonial {
+    padding-top: 70px;
+    padding-left: 200px;
+    padding-right: 200px;
+    padding-bottom: 40px;
+    &__quote {
+      width: 500px;
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 30px;
+    }
+  }
+  .blogspots {
+    &__profile {
+      &--flex {
+        padding-top: 240px;
+        padding-left: 20px;
+      }
+    }
+    &__blogTwo {
+      height: 375px;
+    }
+    &__blogThree {
+      height: 375px;
+    }
+    &__blogOne {
+      height: 375px;
+    }
+    &__flexResponsive {
+      justify-content: center;
+      &--width {
+        margin-left: 40px;
+        width: 500px;
+      }
+    }
+  }
+  .aiming {
+    background: linear-gradient(90deg, #222 60%, rgba(27, 27, 27, 0.1) 100%),
+      url("../images/room-7.jpg");
+    background-position-x: 0%, 0%;
+    background-position-y: 0%, 0%;
+    background-repeat: repeat, repeat;
+    background-size: auto, auto;
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 800px;
+    font-size: 1.6em;
+    background-position-x: 100%;
+    background-position-y: 51%;
+    margin-left: 0rem;
+    &__flex {
+      padding-left: 200px;
+      font-size: 2em;
+      height: 700px;
+    }
+  }
+  .photo {
+    padding-top: 70px;
+    padding-left: 200px;
+    padding-right: 200px;
+    padding-bottom: 40px;
+    &__img {
+      width: 373px;
+      height: 373px;
+    }
+    &__grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+      grid-column-gap: 0px;
+      grid-row-gap: 0px;
+    }
+  }
+}
