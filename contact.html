@@ -40,31 +40,27 @@
                         </address>   
             </div>
 
-        <div class="formcontainer">
-            <form action="#" class="comment-form">
-                <div class="formrow">
-                    <div class="divinput">
-                        <div class="formgroup">
-                            <input type="text" id="input-name" name="input-name" class="form-control"
-                                placeholder="Your Name...">
+            <div class="form-contact">    
+                <h3 class="form-title-h3"> Contact Form</h3>
+                    <form class="container-formulaire">
+                        <div class="items-name-email">
+                            <label for="Name"> Name</label> <br>
+                            <input type="text" id="f-name" name="f-name"><br>
+                            <hr id="hr">
+
+                            <label for="EmailAdress"> Email Address</label><br>
+                            <input type="text" id="f-email" name="f-email"><br>
+                            <hr id="hr">
                         </div>
-                    </div>
-                    <div class="divinput">
-                        <div class="formgroup">
-                            <input type="email" id="input-email" name="input-email" class="form-control"
-                                placeholder="Your Email...">
+
+                        <div class="message">
+                            <label class="items-message" for="Message"> Message</label><br>
+                            <input type="text" id="f-texte" name="f-texte"><br>
+                            <hr class="hr-message">
                         </div>
-                    </div>
-                </div>
-                <div class="formgroup formgroup-textarea">
-                    <textarea name="textarea-comment" id="textarea-comment" rows="8" class="form-control"
-                        placeholder="Your Comment..."></textarea>
-                </div>
-                <div class="form__group">
-                    <button type="submit" class="btn">Post Comment</button>
-                </div>
-            </form>
-        </div>
+                    </form>
+                        <input id="form-button" type="submit" value="Send Message">        
+            </div>
     </section>
     <!-------------------------------IMAGE SATELLITE --------------------------------->
     <section class="img-satellite"> 
