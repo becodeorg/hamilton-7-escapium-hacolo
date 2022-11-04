@@ -2,6 +2,7 @@
 
 .mainSingleRoom {
   color: variable.$globalFontColor;
+  padding: 0%;
 }
 .EscapePresentation {
   background: linear-gradient(
@@ -71,7 +72,7 @@ h1 {
     color: variable.$whiteBackground;
     font-weight: 700;
     background-color: variable.$red;
-    width: 100px;
+    width: 120px;
     margin-top: 20px;
   }
 }
@@ -173,15 +174,47 @@ h1 {
       font-size: smaller;
     }
     &--Bunker {
+      display: none;
+      width: 382px;
+      height: 350px;
+      margin-left: auto;
+      margin-right: auto;
+      background: linear-gradient(
+          0deg,
+          rgba(0, 0, 0, 1) 5%,
+          rgba(27, 27, 27, 0) 100%
+        ),
+        url("../images/room-7.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      box-shadow: 2px 9px 20px 5px rgba(0, 0, 0, 0.75);
     }
     &--BackTTFuture {
+      display: none;
+      width: 382px;
+      height: 350px;
+      margin-left: auto;
+      margin-right: auto;
+      background: linear-gradient(
+          0deg,
+          rgba(0, 0, 0, 1) 5%,
+          rgba(27, 27, 27, 0) 100%
+        ),
+        url("../images/room-9.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      box-shadow: 2px 9px 20px 5px rgba(0, 0, 0, 0.75);
     }
   }
 }
 .grayColor {
   color: variable.$globalFontColor;
 }
-@media screen and (min-width: 768px) and (max-width: 1599px) {
+@media screen and (min-width: 600px) and (max-width: 1599px) {
+  .mainSingleRoom {
+    padding: 0%;
+  }
+
   .EscapePresentation {
     height: 550px;
     &__title {
@@ -210,6 +243,44 @@ h1 {
     }
     &__button {
       margin-top: 35px;
+      width: 126px;
+    }
+  }
+  .otherRoom {
+    &__padding {
+      padding-top: 34px;
+      height: 156px;
+    }
+    &__title {
+      font-size: 2em;
+      padding-left: 20px;
+    }
+    &__responsive {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: 1fr;
+      grid-column-gap: 0px;
+      grid-row-gap: 0px;
+    }
+    &__room {
+      width: 220px;
+      height: 220px;
+      &--flex {
+        width: 100px;
+        font-size: smaller;
+        height: 60px;
+        flex-wrap: wrap;
+      }
+      &--Bunker {
+        width: 220px;
+        height: 220px;
+        display: block;
+      }
+      &--BackTTFuture {
+        width: 220px;
+        height: 220px;
+        display: block;
+      }
     }
   }
 }
