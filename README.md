@@ -4,4 +4,4 @@ Second Project at Becode including HTML, CSS and JS as a bonus. We had to reprod
 The time given for this work was 5 days.
 The group was composed Loïc, Hanane and Colin
 
-The site of the project: ["https://becodeorg.github.io/hamilton-7-escapium-hacolo/"](Escapium).
+The site of the project: [Escapium](https://becodeorg.github.io/hamilton-7-escapium-hacolo/).
