@@ -121,14 +121,20 @@
   background-color: rgba(22, 22, 22, 0.5);
   z-index: 99;
   align-content: center;
-  
+
   .nav__div--right {
     position: fixed;
     right: 2rem;
     display: flex;
 
     #nav__button {
+      display: none;
       margin-right: 1rem;
+    }
+    #nav__button:hover {
+      border-color: #717171;
+      background-color: #717171;
+      cursor: pointer;
     }
     .nav__ul--right {
       color: $whiteBackground;
@@ -137,17 +143,23 @@
       gap: 0.5rem;
 
       .nav__right--search{
-
+        display: flex;
         i {
-          display: inline-block;
-          margin-right: 0.5rem;
+          display: block;
+          margin-top: 14px;
+          margin-right: 1.4rem;
         }
-        .calendar {
-          display: none;
+        i:hover {
+          cursor: pointer;
+        }
+        .fa-calendar{
+
+          display: block;
         }
       }
 
       .nav__right--login {
+        display: none;
         padding-left: 1rem;
         border-left: 1px solid rgba(255,255,255,.50);
         height: 1em;
@@ -286,8 +298,44 @@
       }
 
     }
+    .nav__ul--right {
+      color: $whiteBackground;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
 
+      .nav__right--search{
+
+        i {
+          display: flex;
+          margin-right: 0.5rem;
+        }
+        .calendar {
+          display: block;
+        }
+      }
+    }
+  }
+}
+@media (min-width: 1200px) {
+  .nav__right--login {
+    display: block !important;
+  }
+  .nav__right--search{
+    display: flex;
+    i {
+      display: block;
+      margin-top: 0!important;
+      margin-right: 0.5rem!important;
+    }
+    .fa-calendar{
+
+      display: none!important;
+    }
+  }
+  #nav__button {
+    display: flex!important;
+    margin-right: 1rem;
 
   }
 }
-

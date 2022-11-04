@@ -8,36 +8,38 @@
     <link rel='stylesheet' type='text/css' media='screen' href='resources/css/style.css'>
     <script src="https://kit.fontawesome.com/385f1a4b54.js" crossorigin="anonymous"></script>
 <body>
-<header id="header">
-    <div id="nav__logo">
-        <img class="nav__logo--img" src="resources/images/logo.png">
-    </div>
-    <nav>
-        <ul class="nav__ul--center">
-            <li><a href="home.html">home</a></li>
-            <li><a href="about.html">about</a></li>
-            <li><a href="features.html">features</a></li>
-            <li><a href="rooms.html">rooms</a></li>
-            <li><a href="booking.html">booking</a></li>
-            <li><a href="blogs.html">blog</a></li>
-            <li><a href="contact.html">contact</a></li>
+<nav class="navigation">
+    <img src="resources/images/logo.png" alt="" class="navigation__logo">
+    <ul class="navigation__ul">
+        <li class="navigation__ul__li clicked"><span class="linethrough"></span><a href="./index.html">home</a></li>
+        <li class="navigation__ul__li"><a href="./page/about.html">about</a></li>
+        <li class="navigation__ul__li"><a href="#">features</a></li>
+        <li class="navigation__ul__li"><a href="./page/rooms.html">rooms</a></li>
+        <li class="navigation__ul__li"><a href="#">booking</a></li>
+        <li class="navigation__ul__li"><a href="./page/blogs.html">blog</a></li>
+        <li class="navigation__ul__li"><a href="./page/contact.html">contacts</a></li>
+    </ul>
+    <div class="nav__div--right">
+        <a id="nav__button"href="#">Book Now</a>
+        <ul class="nav__ul--right">
+            <li class="nav__right--search">
+                <i class="fa fa-calendar" aria-hidden="true"></i>
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </li>
+            <li class="nav__right--login">
+                <div>
+                    <i class="fa-solid fa-user"></i>
+                    <span>Sign In</span>
+                </div>
+            </li>
         </ul>
-        <div class="nav__div--right">
-            <a id="nav__button"href="#">Book Now</a>
-            <ul class="nav__ul--right">
-                <li class="nav__right--search">
-                    <i class="fa-solid fa-magnifying-glass"></i>
-                </li>
-                <li class="nav__right--login">
-                    <div>
-                        <i class="fa-solid fa-user"></i>
-                        <span>Sign In</span>
-                    </div>
-                </li>
-            </ul>
-        </div>
-    </nav>
-</header>
+    </div>
+    <div class="navigation__burger">
+        <span class="bar bar--top"></span>
+        <span class="bar bar--middle"></span>
+        <span class="bar bar--bot"></span>
+    </div>
+</nav>
 <section class="section__top">
     <div class="section__container">
         <h1 class="page__title">blog</h1>
